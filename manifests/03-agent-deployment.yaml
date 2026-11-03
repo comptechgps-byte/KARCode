@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: remediation-agent
+  namespace: agentic-demo
+spec:
+  replicas: 1
+  strategy: { type: Recreate }      # never two agents acting at once
+  selector:
+    matchLabels: { app: remediation-agent }
+  template:
+    metadata:
+      labels: { app: remediation-agent }
+    spec:
+      serviceAccountName: remediation-agent
+      terminationGracePeriodSeconds: 1
+      containers:
+        - name: agent
+          image: k8s-agentic-remediator:local
+          imagePullPolicy: IfNotPresent
+          env:
+            - { name: WATCH_NAMESPACE, value: "agentic-demo" }
+            - { name: DIAGNOSIS_MODE, value: "hybrid" }        # rules | hybrid | llm-only | restart
+            - { name: ALLOW_DESTRUCTIVE, value: "false" }
+            - { name: AUTO_APPROVE_MODERATE, value: "true" }   # unattended benchmark runs only
+            - { name: LLM_PROVIDER, value: "ollama" }          # ollama | anthropic
+            - { name: LLM_URL, value: "http://llm.agentic-demo.svc:11434" }
+            - { name: LLM_MODEL, value: "qwen2.5:7b-instruct" }
+            - { name: LLM_NUM_THREAD, value: "8" }             # physical cores of the LLM host
+            - name: ANTHROPIC_API_KEY                            # only for LLM_PROVIDER=anthropic
+              valueFrom:
+                secretKeyRef: { name: agent-secrets, key: anthropic-api-key, optional: true }
+          resources:
+            requests: { memory: "128Mi", cpu: "100m" }
+            limits: { memory: "256Mi", cpu: "500m" }

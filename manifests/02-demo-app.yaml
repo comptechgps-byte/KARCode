@@ -1,0 +1,142 @@
+# Fault-injection targets for the benchmark (see chaos/chaos_scenarios.yaml).
+# Workload objects only (ConfigMap + Deployments): the benchmark deletes and
+# re-creates this file's objects before every trial so each trial starts from
+# an identical state with revision history = 1. Services live in
+# 02-demo-services.yaml and are never touched by the reset.
+#
+# Design notes (each fixes a validity problem found in the v1 testbed):
+#   * strategy: Recreate on every Deployment. With the default RollingUpdate
+#     and replicas=1, a bad release leaves the old healthy pod serving, so
+#     the "fault" never produced an outage and health was measured on
+#     whichever pod the API listed first.
+#   * backend actually listens on :8080 (v1 ran `sleep infinity`, so
+#     cache-proxy's dependency readiness probe could never pass).
+#   * frontend's memory demand comes from a ConfigMap (workload size), not
+#     from the pod template, so the OOM fault models workload growth: a
+#     rollback cannot fix it, only raising the limit can.
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-workload
+  namespace: agentic-demo
+data:
+  VM_BYTES: "0"            # 0 = idle; chaos sets e.g. "100M" (> 64Mi limit)
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  namespace: agentic-demo
+  labels: { app: frontend, tier: web }
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  strategy: { type: Recreate }
+  selector:
+    matchLabels: { app: frontend }
+  template:
+    metadata:
+      labels: { app: frontend, tier: web }
+    spec:
+      terminationGracePeriodSeconds: 2
+      containers:
+        - name: frontend
+          image: polinux/stress:1.0.4
+          env:
+            - name: VM_BYTES
+              valueFrom: { configMapKeyRef: { name: frontend-workload, key: VM_BYTES } }
+          command: ["sh", "-c"]
+          args:
+            - |
+              echo "frontend starting, working-set=${VM_BYTES}"
+              if [ "$VM_BYTES" != "0" ]; then
+                exec stress --vm 1 --vm-bytes "$VM_BYTES" --vm-hang 0
+              fi
+              exec sleep 2147483647
+          readinessProbe:
+            exec: { command: ["true"] }
+            initialDelaySeconds: 2
+            periodSeconds: 2
+          resources:
+            requests: { memory: "32Mi", cpu: "50m" }
+            limits: { memory: "64Mi", cpu: "200m" }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: agentic-demo
+  labels: { app: backend, tier: api }
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  strategy: { type: Recreate }
+  selector:
+    matchLabels: { app: backend }
+  template:
+    metadata:
+      labels: { app: backend, tier: api }
+    spec:
+      terminationGracePeriodSeconds: 2
+      containers:
+        - name: backend
+          image: busybox:1.36
+          env:
+            - { name: CRASH, value: "0" }
+          command: ["sh", "-c"]
+          args:
+            - |
+              if [ "$CRASH" = "1" ]; then
+                echo "$(date -Iseconds) FATAL ${CRASH_MSG:-unhandled exception while loading release config}"
+                exit 1
+              fi
+              mkdir -p /www && echo ok > /www/index.html
+              httpd -p 8080 -h /www
+              echo "backend listening on :8080"
+              while true; do
+                if [ -f /tmp/crash-now ]; then
+                  echo "$(date -Iseconds) FATAL worker process received SIGSEGV"
+                  exit 139
+                fi
+                sleep 1
+              done
+          ports: [{ containerPort: 8080 }]
+          readinessProbe:
+            httpGet: { path: /, port: 8080 }
+            periodSeconds: 2
+            failureThreshold: 1
+          resources:
+            requests: { memory: "16Mi", cpu: "50m" }
+            limits: { memory: "64Mi", cpu: "200m" }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cache-proxy
+  namespace: agentic-demo
+  labels: { app: cache-proxy, tier: cache }
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  strategy: { type: Recreate }
+  selector:
+    matchLabels: { app: cache-proxy }
+  template:
+    metadata:
+      labels: { app: cache-proxy, tier: cache }
+    spec:
+      terminationGracePeriodSeconds: 2
+      containers:
+        - name: cache-proxy
+          image: busybox:1.36
+          command: ["sh", "-c", "exec sleep 2147483647"]
+          readinessProbe:       # ready only while the backend dependency is reachable
+            exec:
+              command: ["sh", "-c", "wget -q -T 2 -O /dev/null http://backend:8080/"]
+            periodSeconds: 3
+            timeoutSeconds: 3
+            failureThreshold: 2
+          resources:
+            requests: { memory: "16Mi", cpu: "25m" }
+            limits: { memory: "32Mi", cpu: "100m" }

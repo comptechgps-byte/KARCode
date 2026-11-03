@@ -1,0 +1,75 @@
+# Online Boutique fault catalog — , before the agent was run
+# against any of these faults. Injectors were validated with the agent OFF only.
+#
+# class:
+#   transfer  — fault class also present in the demo testbed (tests rule transfer)
+#   held-out  — fault class never seen during agent development
+# health: signal that defines recovery
+#   rollout   — target Deployment converged (all desired replicas updated + ready, no stale pods)
+#   user      — storefront flow succeeds (GET /, GET /product, POST /cart, GET /cart)
+# Both signals are recorded in every trial.
+scenarios:
+  - id: bad-image
+    class: transfer
+    target: productcatalogservice
+    mechanism: release with non-existent image tag (ImagePullBackOff)
+    health: rollout
+    correct_actions: [rollback-deployment]
+  - id: crash-release
+    class: transfer
+    target: currencyservice
+    mechanism: release whose entrypoint does not exist (process exits 1, crash loop)
+    health: rollout
+    correct_actions: [rollback-deployment]
+  - id: memory-release
+    class: transfer
+    target: cartservice
+    mechanism: release with 16Mi memory limit (OOMKilled)
+    health: rollout
+    correct_actions: [rollback-deployment, patch-limits]
+  - id: missing-secret
+    class: held-out
+    target: shippingservice
+    mechanism: release referencing an absent Secret (CreateContainerConfigError)
+    health: rollout
+    correct_actions: [rollback-deployment]
+  - id: unschedulable
+    class: held-out
+    target: adservice
+    mechanism: release with a nodeSelector no node satisfies (Pending, FailedScheduling)
+    health: rollout
+    correct_actions: [rollback-deployment]
+  - id: pod-kill
+    class: self-healing
+    target: frontend
+    mechanism: storefront pod deleted
+    health: user
+    correct_actions: [noop]
+  # selector-break was RETIRED during agent-off validation (2026-09-30): after the
+  # cartservice Service selector was changed to match no pod, the storefront kept
+  # working for the full 180 s window — the frontend's long-lived gRPC connection
+  # to the existing cart pod survived the endpoint removal, so the fault stayed
+  # latent. Replaced by zero-replicas (same class: silent config change, all pods
+  # healthy). The agent had not been run against either fault.
+  - id: zero-replicas
+    class: held-out
+    target: cartservice
+    mechanism: config change scales cartservice to 0 replicas; no pod is ever unhealthy
+    health: user
+    correct_actions: [scale-deployment]
+  # AMENDMENT v5 — added 2026-10-03, after agent v3.0 was frozen and before any
+  # agent condition ran on them; injectors validated with the agent OFF only.
+  # Both make a pod unhealthy (unlike unschedulable / zero-replicas), so they test
+  # held-out *diagnosis*. Neither class occurred during agent development.
+  - id: nonroot-release
+    class: held-out
+    target: paymentservice
+    mechanism: release sets runAsUser 0 under the pod's runAsNonRoot policy (CreateContainerConfigError)
+    health: rollout
+    correct_actions: [rollback-deployment]
+  - id: probe-misconfig
+    class: held-out
+    target: emailservice
+    mechanism: release points the readiness probe at an unused port (Running, never Ready, 0 restarts)
+    health: rollout
+    correct_actions: [rollback-deployment]

@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the accompanying article."
+title: "K8s-Agentic-Remediator (KAR): rule-first, LLM-escalated Kubernetes remediation — code, testbeds and experimental data"
+type: software
+authors:
+  - family-names: Bajpayee
+    given-names: Abhijeet
+    affiliation: "Department of Information Technology, National Institute of Technology Raipur, India"
+    email: abajpayee.phd2026.it@nitrr.ac.in
+  - family-names: Sahu
+    given-names: Tirath Prasad
+    affiliation: "Department of Information Technology, National Institute of Technology Raipur, India"
+    email: tpsahu.it@nitrr.ac.in
+  - family-names: Tripathi
+    given-names: Rakesh
+    affiliation: "Department of Information Technology, National Institute of Technology Raipur, India"
+    email: rtripathi.it@nitrr.ac.in
+version: "3.1"
+date-released: "2026-10-03"
+# repository-code: Will be upodated after reviewer's Comment
+# doi: Will be upodated after reviewer's Comment
+# license: Will be upodated after reviewer's Comment
+keywords:
+  - Kubernetes
+  - self-healing
+  - AIOps
+  - large language models
+  - autonomous remediation
+  - prompt injection
+preferred-citation:
+  type: article
+  title: "Rules First, Then a Well-Tested Model: An Empirical Study of Where the LLM Should Sit in Kubernetes Fault Remediation"
+  authors:
+    - family-names: Bajpayee
+      given-names: Abhijeet
+    - family-names: Sahu
+      given-names: Tirath Prasad
+    - family-names: Tripathi
+      given-names: Rakesh
+  year: 2026
+  status: submitted

@@ -1,0 +1,72 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: remediation-agent
+  namespace: agentic-demo
+---
+# Everything the agent can read or change is namespace-scoped: the agent holds
+# no ClusterRole at all, so it cannot see or touch nodes, other namespaces, or
+# cluster-wide objects even if its decision logic were subverted (e.g. by a
+# prompt-injected LLM proposal). The safety gate (agent/safety.py) is the
+# first line of defence; this Role is the second.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: remediation-agent
+  namespace: agentic-demo
+rules:
+  # observe
+  - apiGroups: [""]
+    resources: ["pods", "pods/log", "events"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["apps"]
+    resources: ["replicasets"]
+    verbs: ["get", "list"]        # owner resolution + revision history (v1 lacked this)
+  - apiGroups: [""]
+    resources: ["configmaps"]
+    verbs: ["list"]               # v2.1 tool: do referenced ConfigMaps exist? (Secrets never read)
+  # v3.0 generic get/describe tools: read-only list over the standard namespaced
+  # kinds (Secrets deliberately excluded)
+  - apiGroups: [""]
+    resources: ["services", "endpoints", "persistentvolumeclaims", "resourcequotas",
+                "limitranges", "serviceaccounts"]
+    verbs: ["list"]
+  - apiGroups: ["apps"]
+    resources: ["statefulsets", "daemonsets"]
+    verbs: ["list"]
+  - apiGroups: ["batch"]
+    resources: ["jobs"]
+    verbs: ["list"]
+  - apiGroups: ["networking.k8s.io"]
+    resources: ["ingresses"]
+    verbs: ["list"]
+  - apiGroups: ["autoscaling"]
+    resources: ["horizontalpodautoscalers"]
+    verbs: ["list"]
+  # act
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["delete"]             # restart-pod
+  - apiGroups: ["apps"]
+    resources: ["deployments"]
+    verbs: ["get", "list", "patch"]   # patch-limits, rollback-deployment
+  - apiGroups: ["apps"]
+    resources: ["deployments/scale"]
+    verbs: ["get", "patch"]           # scale-deployment
+  - apiGroups: ["networking.k8s.io"]
+    resources: ["networkpolicies"]
+    verbs: ["get", "list", "delete"]  # revert-network-policy
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: remediation-agent
+  namespace: agentic-demo
+subjects:
+  - kind: ServiceAccount
+    name: remediation-agent
+    namespace: agentic-demo
+roleRef:
+  kind: Role
+  name: remediation-agent
+  apiGroup: rbac.authorization.k8s.io
