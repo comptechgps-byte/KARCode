@@ -1,0 +1,337 @@
+[1/168] b01-unschedulable-llm-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[2/168] b01-missing-secret-hybrid-tools
+    -> recovered=True ttr=212.64 first_action=restart-pod valid=True 
+[3/168] b01-pod-kill-baseline
+    -> recovered=True ttr=13.09 first_action= valid=True 
+[4/168] b01-memory-release-hybrid-tools
+    -> recovered=True ttr=76.84 first_action=patch-limits valid=True 
+[5/168] b01-memory-release-llm-tools
+    -> recovered=True ttr=94.12 first_action=patch-limits valid=True 
+[6/168] b01-unschedulable-hybrid
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[7/168] b01-memory-release-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[8/168] b01-bad-image-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[9/168] b01-pod-kill-hybrid-tools
+    -> recovered=True ttr=20.11 first_action= valid=True 
+[10/168] b01-zero-replicas-llm-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[11/168] b01-pod-kill-rules
+    -> recovered=True ttr=16.1 first_action= valid=True 
+[12/168] b01-crash-release-llm-tools
+    -> recovered=True ttr=66.28 first_action=rollback-deployment valid=True 
+[13/168] b01-bad-image-hybrid
+    -> recovered=True ttr=25.89 first_action=rollback-deployment valid=True 
+[14/168] b01-zero-replicas-hybrid-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[15/168] b01-missing-secret-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[16/168] b01-pod-kill-llm-tools
+    -> recovered=True ttr=24.12 first_action= valid=True 
+[17/168] b01-bad-image-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[18/168] b01-unschedulable-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[19/168] b01-zero-replicas-hybrid
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[20/168] b01-unschedulable-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[21/168] b01-missing-secret-hybrid
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[22/168] b01-pod-kill-restart
+    -> recovered=True ttr=25.56 first_action= valid=True 
+[23/168] b01-missing-secret-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[24/168] b01-zero-replicas-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[25/168] b01-crash-release-hybrid-tools
+    -> recovered=True ttr=27.07 first_action=rollback-deployment valid=True 
+[26/168] b01-crash-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[27/168] b01-zero-replicas-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[28/168] b01-memory-release-rules
+    -> recovered=True ttr=29.81 first_action=patch-limits valid=True 
+[29/168] b01-bad-image-llm-tools
+    -> recovered=True ttr=71.18 first_action=rollback-deployment valid=True 
+[30/168] b01-unschedulable-hybrid-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[31/168] b01-bad-image-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[32/168] b01-crash-release-rules
+    -> recovered=True ttr=24.87 first_action=rollback-deployment valid=True 
+[33/168] b01-bad-image-hybrid-tools
+    -> recovered=True ttr=94.27 first_action=rollback-deployment valid=True 
+[34/168] b01-memory-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[35/168] b01-crash-release-hybrid
+    -> recovered=True ttr=25.04 first_action=rollback-deployment valid=True 
+[36/168] b01-crash-release-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[37/168] b01-unschedulable-restart
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[38/168] b01-zero-replicas-restart
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[39/168] b01-pod-kill-hybrid
+    -> recovered=True ttr=20.12 first_action= valid=True 
+[40/168] b01-missing-secret-llm-tools
+    -> recovered=True ttr=56.12 first_action=rollback-deployment valid=True 
+[41/168] b01-missing-secret-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[42/168] b01-memory-release-hybrid
+    -> recovered=True ttr=27.61 first_action=patch-limits valid=True 
+[43/168] b02-missing-secret-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[44/168] b02-memory-release-llm-tools
+    -> recovered=True ttr=83.2 first_action=patch-limits valid=True 
+[45/168] b02-zero-replicas-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[46/168] b02-missing-secret-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[47/168] b02-bad-image-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[48/168] b02-crash-release-hybrid-tools
+    -> recovered=True ttr=26.64 first_action=rollback-deployment valid=True 
+[49/168] b02-pod-kill-hybrid-tools
+    -> recovered=True ttr=31.94 first_action= valid=True 
+[50/168] b02-pod-kill-hybrid
+    -> recovered=True ttr=20.1 first_action= valid=True 
+[51/168] b02-bad-image-llm-tools
+    -> recovered=True ttr=79.99 first_action=rollback-deployment valid=True 
+[52/168] b02-crash-release-hybrid
+    -> recovered=True ttr=27.35 first_action=rollback-deployment valid=True 
+[53/168] b02-unschedulable-hybrid-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[54/168] b02-memory-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[55/168] b02-memory-release-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[56/168] b02-zero-replicas-llm-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[57/168] b02-bad-image-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[58/168] b02-missing-secret-llm-tools
+    -> recovered=True ttr=68.64 first_action=rollback-deployment valid=True 
+[59/168] b02-unschedulable-restart
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[60/168] b02-crash-release-rules
+    -> recovered=True ttr=25.46 first_action=rollback-deployment valid=True 
+[61/168] b02-pod-kill-baseline
+    -> recovered=True ttr=20.11 first_action= valid=True 
+[62/168] b02-bad-image-hybrid-tools
+    -> recovered=True ttr=79.47 first_action=rollback-deployment valid=True 
+[63/168] b02-zero-replicas-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[64/168] b02-memory-release-hybrid-tools
+    -> recovered=True ttr=30.76 first_action=patch-limits valid=True 
+[65/168] b02-unschedulable-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[66/168] b02-missing-secret-hybrid
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[67/168] b02-unschedulable-llm-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[68/168] b02-zero-replicas-hybrid
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[69/168] b02-pod-kill-rules
+    -> recovered=True ttr=20.11 first_action= valid=True 
+[70/168] b02-missing-secret-hybrid-tools
+    -> recovered=True ttr=54.08 first_action=rollback-deployment valid=True 
+[71/168] b02-bad-image-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[72/168] b02-memory-release-rules
+    -> recovered=True ttr=32.28 first_action=patch-limits valid=True 
+[73/168] b02-memory-release-hybrid
+    -> recovered=True ttr=26.55 first_action=patch-limits valid=True 
+[74/168] b02-bad-image-hybrid
+    -> recovered=True ttr=24.9 first_action=rollback-deployment valid=True 
+[75/168] b02-missing-secret-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[76/168] b02-pod-kill-llm-tools
+    -> recovered=True ttr=20.11 first_action= valid=True 
+[77/168] b02-unschedulable-hybrid
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[78/168] b02-crash-release-llm-tools
+    -> recovered=True ttr=66.11 first_action=rollback-deployment valid=True 
+[79/168] b02-unschedulable-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[80/168] b02-zero-replicas-hybrid-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[81/168] b02-crash-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[82/168] b02-crash-release-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[83/168] b02-pod-kill-restart
+    -> recovered=True ttr=20.11 first_action= valid=True 
+[84/168] b02-zero-replicas-restart
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[85/168] b03-unschedulable-hybrid
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[86/168] b03-bad-image-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[87/168] b03-crash-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[88/168] b03-pod-kill-llm-tools
+    -> recovered=True ttr=20.1 first_action= valid=True 
+[89/168] b03-missing-secret-hybrid-tools
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[90/168] b03-missing-secret-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[91/168] b03-crash-release-hybrid-tools
+    -> recovered=True ttr=26.87 first_action=rollback-deployment valid=True 
+[92/168] b03-zero-replicas-restart
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[93/168] b03-missing-secret-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[94/168] b03-bad-image-hybrid
+    -> recovered=True ttr=20.8 first_action=rollback-deployment valid=True 
+[95/168] b03-missing-secret-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[96/168] b03-memory-release-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[97/168] b03-crash-release-rules
+    -> recovered=True ttr=27.71 first_action=rollback-deployment valid=True 
+[98/168] b03-crash-release-llm-tools
+    -> recovered=True ttr=83.89 first_action=rollback-deployment valid=True 
+[99/168] b03-missing-secret-hybrid
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[100/168] b03-memory-release-hybrid
+    -> recovered=True ttr=27.99 first_action=patch-limits valid=True 
+[101/168] b03-bad-image-llm-tools
+    -> recovered=True ttr=109.35 first_action=rollback-deployment valid=True 
+[102/168] b03-unschedulable-restart
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[103/168] b03-bad-image-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[104/168] b03-bad-image-hybrid-tools
+    -> recovered=True ttr=72.98 first_action=rollback-deployment valid=True 
+[105/168] b03-zero-replicas-hybrid-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[106/168] b03-pod-kill-rules
+    -> recovered=True ttr=20.11 first_action= valid=True 
+[107/168] b03-pod-kill-hybrid-tools
+    -> recovered=True ttr=20.1 first_action= valid=True 
+[108/168] b03-zero-replicas-hybrid
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[109/168] b03-memory-release-llm-tools
+    -> recovered=True ttr=62.0 first_action=rollback-deployment valid=True 
+[110/168] b03-unschedulable-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[111/168] b03-crash-release-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[112/168] b03-unschedulable-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[113/168] b03-pod-kill-baseline
+    -> recovered=True ttr=21.1 first_action= valid=True 
+[114/168] b03-bad-image-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[115/168] b03-memory-release-rules
+    -> recovered=True ttr=78.64 first_action=patch-limits valid=True 
+[116/168] b03-zero-replicas-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[117/168] b03-memory-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[118/168] b03-zero-replicas-llm-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[119/168] b03-memory-release-hybrid-tools
+    -> recovered=True ttr=28.25 first_action=patch-limits valid=True 
+[120/168] b03-zero-replicas-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[121/168] b03-missing-secret-llm-tools
+    -> recovered=True ttr=54.08 first_action=rollback-deployment valid=True 
+[122/168] b03-pod-kill-hybrid
+    -> recovered=True ttr=20.11 first_action= valid=True 
+[123/168] b03-pod-kill-restart
+    -> recovered=True ttr=20.12 first_action= valid=True 
+[124/168] b03-unschedulable-llm-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[125/168] b03-unschedulable-hybrid-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[126/168] b03-crash-release-hybrid
+    -> recovered=True ttr=26.03 first_action=rollback-deployment valid=True 
+[127/168] b04-missing-secret-llm-tools
+    -> recovered=True ttr=63.48 first_action=rollback-deployment valid=True 
+[128/168] b04-zero-replicas-hybrid-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[129/168] b04-pod-kill-hybrid-tools
+    -> recovered=True ttr=20.11 first_action= valid=True 
+[130/168] b04-memory-release-hybrid-tools
+    -> recovered=True ttr=30.14 first_action=patch-limits valid=True 
+[131/168] b04-missing-secret-hybrid-tools
+    -> recovered=True ttr=135.12 first_action=patch-limits valid=True 
+[132/168] b04-bad-image-hybrid
+    -> recovered=True ttr=26.89 first_action=rollback-deployment valid=True 
+[133/168] b04-memory-release-rules
+    -> recovered=True ttr=28.18 first_action=patch-limits valid=True 
+[134/168] b04-bad-image-llm-tools
+    -> recovered=True ttr=83.48 first_action=rollback-deployment valid=True 
+[135/168] b04-crash-release-hybrid
+    -> recovered=True ttr=26.35 first_action=rollback-deployment valid=True 
+[136/168] b04-missing-secret-hybrid
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[137/168] b04-unschedulable-hybrid
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[138/168] b04-unschedulable-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[139/168] b04-zero-replicas-restart
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[140/168] b04-memory-release-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[141/168] b04-bad-image-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[142/168] b04-memory-release-hybrid
+    -> recovered=True ttr=28.25 first_action=patch-limits valid=True 
+[143/168] b04-bad-image-hybrid-tools
+    -> recovered=True ttr=78.16 first_action=rollback-deployment valid=True 
+[144/168] b04-zero-replicas-llm-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[145/168] b04-missing-secret-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[146/168] b04-zero-replicas-hybrid
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[147/168] b04-unschedulable-hybrid-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[148/168] b04-memory-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[149/168] b04-unschedulable-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[150/168] b04-bad-image-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[151/168] b04-zero-replicas-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[152/168] b04-crash-release-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[153/168] b04-missing-secret-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[154/168] b04-pod-kill-rules
+    -> recovered=True ttr=16.09 first_action= valid=True 
+[155/168] b04-bad-image-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[156/168] b04-pod-kill-restart
+    -> recovered=True ttr=20.11 first_action= valid=True 
+[157/168] b04-pod-kill-hybrid
+    -> recovered=True ttr=20.12 first_action= valid=True 
+[158/168] b04-unschedulable-restart
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[159/168] b04-missing-secret-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[160/168] b04-crash-release-rules
+    -> recovered=True ttr=22.93 first_action=rollback-deployment valid=True 
+[161/168] b04-pod-kill-llm-tools
+    -> recovered=True ttr=16.09 first_action= valid=True 
+[162/168] b04-zero-replicas-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[163/168] b04-crash-release-llm-tools
+    -> recovered=True ttr=190.66 first_action=restart-pod valid=True 
+[164/168] b04-pod-kill-baseline
+    -> recovered=True ttr=21.13 first_action= valid=True 
+[165/168] b04-unschedulable-llm-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[166/168] b04-crash-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[167/168] b04-crash-release-hybrid-tools
+    -> recovered=True ttr=23.71 first_action=rollback-deployment valid=True 
+[168/168] b04-memory-release-llm-tools
+    -> recovered=True ttr=194.13 first_action=restart-pod valid=True 
+done: results/exp3/trials.csv

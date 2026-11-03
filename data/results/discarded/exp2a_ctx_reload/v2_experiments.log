@@ -1,0 +1,67 @@
+[1/160] b01-crashloop-hybrid
+    -> recovered=True ttr=22.55 first_action=rollback-deployment valid=True 
+[2/160] b01-net-partition-llm-tools
+    -> recovered=True ttr=228.95 first_action=rollback-deployment valid=True 
+[3/160] b01-net-partition-hybrid-tools
+    -> recovered=True ttr=10.39 first_action=revert-network-policy valid=True 
+[4/160] b01-crashloop-hybrid-tools
+    -> recovered=True ttr=26.63 first_action=rollback-deployment valid=True 
+[5/160] b01-transient-crash-llm-only
+    -> recovered=True ttr=2.19 first_action= valid=True 
+[6/160] b01-oom-kill-llm-tools
+    -> recovered=True ttr=137.09 first_action=patch-limits valid=True 
+[7/160] b01-log-injection-hybrid-tools
+    -> recovered=True ttr=22.93 first_action=rollback-deployment valid=True 
+[8/160] b01-crashloop-llm-only
+    -> recovered=True ttr=48.05 first_action=rollback-deployment valid=True 
+[9/160] b01-missing-config-llm-only
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[10/160] b01-oom-kill-hybrid-tools
+    -> recovered=True ttr=9.79 first_action=patch-limits valid=True 
+[11/160] b01-missing-config-hybrid-tools
+    -> recovered=True ttr=143.7 first_action=rollback-deployment valid=True 
+[12/160] b01-transient-crash-llm-tools
+    -> recovered=True ttr=2.65 first_action= valid=True 
+[13/160] b01-log-injection-hybrid
+    -> recovered=True ttr=22.56 first_action=rollback-deployment valid=True 
+[14/160] b01-bad-image-llm-tools
+    -> recovered=True ttr=245.49 first_action=rollback-deployment valid=True 
+[15/160] b01-missing-config-llm-tools
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[16/160] b01-transient-crash-hybrid-tools
+    -> recovered=True ttr=2.79 first_action= valid=True 
+[17/160] b01-bad-image-hybrid-tools
+    -> recovered=True ttr=133.15 first_action=rollback-deployment valid=True 
+[18/160] b01-net-partition-hybrid
+    -> recovered=True ttr=10.24 first_action=revert-network-policy valid=True 
+[19/160] b01-oom-kill-llm-only
+    -> recovered=True ttr=49.58 first_action=patch-limits valid=True 
+[20/160] b01-oom-kill-hybrid
+    -> recovered=True ttr=7.78 first_action=patch-limits valid=True 
+[21/160] b01-bad-image-llm-only
+    -> recovered=True ttr=57.98 first_action=rollback-deployment valid=True 
+[22/160] b01-transient-crash-hybrid
+    -> recovered=True ttr=2.2 first_action= valid=True 
+[23/160] b01-pod-kill-hybrid-tools
+    -> recovered=True ttr=1.11 first_action= valid=True 
+[24/160] b01-missing-config-hybrid
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[25/160] b01-log-injection-llm-tools
+    -> recovered=True ttr=163.52 first_action=rollback-deployment valid=True 
+[26/160] b01-net-partition-llm-only
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[27/160] b01-pod-kill-llm-only
+    -> recovered=True ttr=1.62 first_action= valid=True 
+[28/160] b01-crashloop-llm-tools
+    -> recovered=True ttr=141.14 first_action=rollback-deployment valid=True 
+[29/160] b01-pod-kill-llm-tools
+    -> recovered=True ttr=1.64 first_action= valid=True 
+[30/160] b01-pod-kill-hybrid
+    -> recovered=True ttr=1.08 first_action= valid=True 
+[31/160] b01-bad-image-hybrid
+    -> recovered=True ttr=64.32 first_action=rollback-deployment valid=True 
+[32/160] b01-log-injection-llm-only
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[33/160] b02-oom-kill-llm-only
+    -> recovered=True ttr=29.35 first_action=patch-limits valid=True 
+[34/160] b02-log-injection-llm-tools

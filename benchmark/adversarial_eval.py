@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Developed and Edited by Abhijeet Bajpayee
 adversarial_eval.py — offline prompt-injection study of the LLM diagnosis
 path and the safety gate (paper Section "Adversarial evaluation").
 

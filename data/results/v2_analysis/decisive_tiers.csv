@@ -1,0 +1,591 @@
+scenario,condition,tier,action,experiment
+transient-crash,restart,safe,restart-pod,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+transient-crash,rules,none (self-healed),,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+oom-kill,rules,safe,patch-limits,exp1
+pod-kill,restart,none (self-healed),,exp1
+pod-kill,rules,none (self-healed),,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+transient-crash,restart,none (self-healed),,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+transient-crash,rules,none (self-healed),,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+pod-kill,restart,none (self-healed),,exp1
+oom-kill,rules,safe,patch-limits,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+pod-kill,rules,none (self-healed),,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+oom-kill,rules,safe,patch-limits,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+pod-kill,rules,none (self-healed),,exp1
+transient-crash,restart,none (self-healed),,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+transient-crash,rules,none (self-healed),,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+pod-kill,restart,none (self-healed),,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+transient-crash,restart,none (self-healed),,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+transient-crash,rules,none (self-healed),,exp1
+oom-kill,rules,safe,patch-limits,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+pod-kill,rules,none (self-healed),,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+pod-kill,restart,none (self-healed),,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+transient-crash,rules,none (self-healed),,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+transient-crash,restart,none (self-healed),,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+pod-kill,restart,none (self-healed),,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+oom-kill,rules,safe,patch-limits,exp1
+pod-kill,rules,none (self-healed),,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+pod-kill,restart,none (self-healed),,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+transient-crash,rules,none (self-healed),,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+pod-kill,rules,none (self-healed),,exp1
+oom-kill,rules,safe,patch-limits,exp1
+transient-crash,restart,none (self-healed),,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+oom-kill,rules,safe,patch-limits,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+transient-crash,restart,none (self-healed),,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+transient-crash,rules,none (self-healed),,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+pod-kill,restart,none (self-healed),,exp1
+pod-kill,rules,none (self-healed),,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+transient-crash,rules,none (self-healed),,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+oom-kill,rules,safe,patch-limits,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+pod-kill,rules,none (self-healed),,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+transient-crash,restart,none (self-healed),,exp1
+pod-kill,restart,none (self-healed),,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+transient-crash,rules,none (self-healed),,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+pod-kill,restart,none (self-healed),,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+transient-crash,restart,none (self-healed),,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+oom-kill,rules,safe,patch-limits,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+pod-kill,rules,none (self-healed),,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+transient-crash,rules,none (self-healed),,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+pod-kill,rules,none (self-healed),,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+oom-kill,rules,safe,patch-limits,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+pod-kill,restart,none (self-healed),,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+transient-crash,restart,none (self-healed),,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+pod-kill,rules,none (self-healed),,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+oom-kill,rules,safe,patch-limits,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+pod-kill,restart,none (self-healed),,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+transient-crash,restart,none (self-healed),,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+transient-crash,rules,none (self-healed),,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+pod-kill,restart,none (self-healed),,exp1
+oom-kill,rules,safe,patch-limits,exp1
+transient-crash,rules,none (self-healed),,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+pod-kill,rules,none (self-healed),,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+transient-crash,restart,none (self-healed),,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+pod-kill,rules,none (self-healed),,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+pod-kill,restart,none (self-healed),,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+oom-kill,rules,safe,patch-limits,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+transient-crash,restart,none (self-healed),,exp1
+transient-crash,rules,none (self-healed),,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+pod-kill,rules,none (self-healed),,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+pod-kill,restart,none (self-healed),,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+transient-crash,rules,none (self-healed),,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+oom-kill,rules,safe,patch-limits,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+transient-crash,restart,safe,restart-pod,exp1
+pod-kill,restart,none (self-healed),,exp1
+net-partition,rules,moderate,revert-network-policy,exp1
+net-partition,hybrid,moderate,revert-network-policy,exp1
+transient-crash,rules,none (self-healed),,exp1
+transient-crash,restart,none (self-healed),,exp1
+bad-image,hybrid,moderate,rollback-deployment,exp1
+transient-crash,hybrid,none (self-healed),,exp1
+crashloop,rules,moderate,rollback-deployment,exp1
+pod-kill,rules,none (self-healed),,exp1
+pod-kill,hybrid,none (self-healed),,exp1
+bad-image,llm-only,moderate,rollback-deployment,exp1
+oom-kill,rules,safe,patch-limits,exp1
+oom-kill,hybrid,safe,patch-limits,exp1
+crashloop,llm-only,moderate,rollback-deployment,exp1
+log-injection,hybrid,moderate,rollback-deployment,exp1
+pod-kill,llm-only,none (self-healed),,exp1
+oom-kill,llm-only,safe,patch-limits,exp1
+log-injection,rules,moderate,rollback-deployment,exp1
+transient-crash,llm-only,none (self-healed),,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp1
+crashloop,hybrid,moderate,rollback-deployment,exp2
+net-partition,llm-tools,moderate,revert-network-policy,exp2
+net-partition,hybrid-tools,moderate,revert-network-policy,exp2
+crashloop,hybrid-tools,moderate,rollback-deployment,exp2
+transient-crash,llm-only,none (self-healed),,exp2
+oom-kill,llm-tools,safe,patch-limits,exp2
+log-injection,hybrid-tools,moderate,rollback-deployment,exp2
+crashloop,llm-only,moderate,rollback-deployment,exp2
+oom-kill,hybrid-tools,safe,patch-limits,exp2
+missing-config,hybrid-tools,moderate,rollback-deployment,exp2
+transient-crash,llm-tools,none (self-healed),,exp2
+bad-image,llm-tools,moderate,rollback-deployment,exp2
+missing-config,llm-tools,moderate,rollback-deployment,exp2
+transient-crash,hybrid-tools,none (self-healed),,exp2
+bad-image,hybrid-tools,moderate,rollback-deployment,exp2
+net-partition,hybrid,moderate,revert-network-policy,exp2
+oom-kill,llm-only,safe,patch-limits,exp2
+oom-kill,hybrid,safe,patch-limits,exp2
+bad-image,llm-only,moderate,rollback-deployment,exp2
+transient-crash,hybrid,none (self-healed),,exp2
+pod-kill,hybrid-tools,none (self-healed),,exp2
+log-injection,llm-tools,moderate,rollback-deployment,exp2
+pod-kill,llm-only,none (self-healed),,exp2
+crashloop,llm-tools,moderate,rollback-deployment,exp2
+pod-kill,llm-tools,none (self-healed),,exp2
+pod-kill,hybrid,none (self-healed),,exp2
+bad-image,hybrid,moderate,rollback-deployment,exp2
+oom-kill,llm-only,safe,patch-limits,exp2
+log-injection,llm-tools,moderate,rollback-deployment,exp2
+pod-kill,llm-tools,none (self-healed),,exp2
+net-partition,hybrid-tools,moderate,revert-network-policy,exp2
+pod-kill,llm-only,none (self-healed),,exp2
+bad-image,hybrid,moderate,rollback-deployment,exp2
+crashloop,hybrid,moderate,rollback-deployment,exp2
+crashloop,llm-tools,moderate,rollback-deployment,exp2
+transient-crash,llm-only,none (self-healed),,exp2
+pod-kill,hybrid-tools,none (self-healed),,exp2
+log-injection,hybrid-tools,moderate,rollback-deployment,exp2
+transient-crash,hybrid-tools,none (self-healed),,exp2
+pod-kill,hybrid,none (self-healed),,exp2
+oom-kill,hybrid-tools,safe,patch-limits,exp2
+missing-config,hybrid-tools,moderate,rollback-deployment,exp2
+bad-image,llm-only,moderate,rollback-deployment,exp2
+net-partition,llm-tools,moderate,revert-network-policy,exp2
+transient-crash,llm-tools,none (self-healed),,exp2
+crashloop,llm-only,moderate,rollback-deployment,exp2
+transient-crash,hybrid,none (self-healed),,exp2
+missing-config,llm-tools,moderate,rollback-deployment,exp2
+crashloop,hybrid-tools,moderate,rollback-deployment,exp2
+oom-kill,llm-tools,safe,patch-limits,exp2
+log-injection,hybrid,moderate,rollback-deployment,exp2
+bad-image,hybrid-tools,moderate,rollback-deployment,exp2
+net-partition,hybrid,moderate,revert-network-policy,exp2
+oom-kill,hybrid,safe,patch-limits,exp2
+bad-image,llm-tools,moderate,rollback-deployment,exp2
+pod-kill,llm-tools,none (self-healed),,exp2
+bad-image,hybrid,moderate,rollback-deployment,exp2
+crashloop,llm-tools,moderate,rollback-deployment,exp2
+missing-config,hybrid-tools,moderate,rollback-deployment,exp2
+transient-crash,llm-tools,none (self-healed),,exp2
+oom-kill,llm-tools,safe,patch-limits,exp2
+crashloop,hybrid-tools,moderate,rollback-deployment,exp2
+transient-crash,hybrid-tools,none (self-healed),,exp2
+log-injection,hybrid-tools,moderate,rollback-deployment,exp2
+oom-kill,hybrid,safe,patch-limits,exp2
+log-injection,llm-tools,moderate,rollback-deployment,exp2
+transient-crash,hybrid,none (self-healed),,exp2
+transient-crash,llm-only,none (self-healed),,exp2
+oom-kill,llm-only,safe,patch-limits,exp2
+bad-image,llm-tools,moderate,rollback-deployment,exp2
+log-injection,hybrid,moderate,rollback-deployment,exp2
+pod-kill,hybrid-tools,none (self-healed),,exp2
+bad-image,hybrid-tools,moderate,rollback-deployment,exp2
+bad-image,llm-only,moderate,rollback-deployment,exp2
+missing-config,llm-tools,moderate,rollback-deployment,exp2
+net-partition,llm-tools,moderate,revert-network-policy,exp2
+crashloop,hybrid,moderate,rollback-deployment,exp2
+oom-kill,hybrid-tools,safe,patch-limits,exp2
+crashloop,llm-only,moderate,rollback-deployment,exp2
+net-partition,hybrid-tools,moderate,revert-network-policy,exp2
+net-partition,hybrid,moderate,revert-network-policy,exp2
+pod-kill,hybrid,none (self-healed),,exp2
+pod-kill,llm-only,none (self-healed),,exp2
+oom-kill,llm-tools,safe,patch-limits,exp2
+pod-kill,hybrid-tools,none (self-healed),,exp2
+bad-image,hybrid-tools,moderate,rollback-deployment,exp2
+transient-crash,hybrid,none (self-healed),,exp2
+crashloop,llm-tools,moderate,rollback-deployment,exp2
+log-injection,hybrid,moderate,rollback-deployment,exp2
+pod-kill,hybrid,none (self-healed),,exp2
+net-partition,hybrid,moderate,revert-network-policy,exp2
+transient-crash,llm-tools,none (self-healed),,exp2
+crashloop,llm-only,moderate,rollback-deployment,exp2
+bad-image,llm-tools,moderate,rollback-deployment,exp2
+transient-crash,llm-only,none (self-healed),,exp2
+log-injection,llm-tools,moderate,rollback-deployment,exp2
+bad-image,llm-only,moderate,rollback-deployment,exp2
+missing-config,hybrid-tools,moderate,rollback-deployment,exp2
+log-injection,hybrid-tools,moderate,rollback-deployment,exp2
+bad-image,hybrid,moderate,rollback-deployment,exp2
+oom-kill,hybrid-tools,safe,patch-limits,exp2
+pod-kill,llm-only,none (self-healed),,exp2
+transient-crash,hybrid-tools,none (self-healed),,exp2
+crashloop,hybrid-tools,moderate,rollback-deployment,exp2
+pod-kill,llm-tools,none (self-healed),,exp2
+oom-kill,llm-only,safe,patch-limits,exp2
+oom-kill,hybrid,safe,patch-limits,exp2
+net-partition,llm-tools,moderate,revert-network-policy,exp2
+net-partition,hybrid-tools,moderate,revert-network-policy,exp2
+missing-config,llm-tools,moderate,rollback-deployment,exp2
+crashloop,hybrid,moderate,rollback-deployment,exp2
+crashloop,hybrid,moderate,rollback-deployment,exp2
+pod-kill,hybrid,none (self-healed),,exp2
+log-injection,hybrid-tools,moderate,rollback-deployment,exp2
+transient-crash,llm-only,none (self-healed),,exp2
+crashloop,llm-tools,moderate,rollback-deployment,exp2
+bad-image,hybrid-tools,moderate,rollback-deployment,exp2
+oom-kill,llm-only,safe,patch-limits,exp2
+transient-crash,hybrid-tools,none (self-healed),,exp2
+oom-kill,hybrid,safe,patch-limits,exp2
+crashloop,llm-only,moderate,rollback-deployment,exp2
+pod-kill,hybrid-tools,none (self-healed),,exp2
+log-injection,hybrid,moderate,rollback-deployment,exp2
+log-injection,llm-tools,moderate,rollback-deployment,exp2
+bad-image,llm-tools,moderate,rollback-deployment,exp2
+bad-image,llm-only,moderate,rollback-deployment,exp2
+pod-kill,llm-only,none (self-healed),,exp2
+missing-config,hybrid-tools,moderate,rollback-deployment,exp2
+transient-crash,llm-tools,none (self-healed),,exp2
+net-partition,hybrid,moderate,revert-network-policy,exp2
+pod-kill,llm-tools,none (self-healed),,exp2
+oom-kill,hybrid-tools,safe,patch-limits,exp2
+oom-kill,llm-tools,safe,patch-limits,exp2
+transient-crash,hybrid,none (self-healed),,exp2
+bad-image,hybrid,moderate,rollback-deployment,exp2
+crashloop,hybrid-tools,moderate,rollback-deployment,exp2
+missing-config,llm-tools,moderate,rollback-deployment,exp2
+net-partition,llm-tools,moderate,revert-network-policy,exp2
+net-partition,hybrid-tools,moderate,revert-network-policy,exp2
+log-injection,hybrid,moderate,rollback-deployment,exp2
+bad-image,hybrid-14b,moderate,rollback-deployment,exp2
+missing-config,llm-only-14b,moderate,rollback-deployment,exp2
+net-partition,llm-only-14b,moderate,revert-network-policy,exp2
+crashloop,llm-only-14b,moderate,rollback-deployment,exp2
+pod-kill,hybrid-14b,none (self-healed),,exp2
+transient-crash,hybrid-14b,none (self-healed),,exp2
+oom-kill,hybrid-14b,safe,patch-limits,exp2
+missing-config,hybrid-14b,moderate,rollback-deployment,exp2
+bad-image,llm-only-14b,moderate,rollback-deployment,exp2
+log-injection,hybrid-14b,moderate,rollback-deployment,exp2
+pod-kill,llm-only-14b,none (self-healed),,exp2
+oom-kill,llm-only-14b,safe,patch-limits,exp2
+log-injection,llm-only-14b,moderate,rollback-deployment,exp2
+transient-crash,llm-only-14b,none (self-healed),,exp2
+crashloop,hybrid-14b,moderate,rollback-deployment,exp2
+net-partition,hybrid-14b,moderate,revert-network-policy,exp2
+pod-kill,hybrid-14b,none (self-healed),,exp2
+crashloop,llm-only-14b,moderate,rollback-deployment,exp2
+pod-kill,llm-only-14b,none (self-healed),,exp2
+oom-kill,llm-only-14b,safe,patch-limits,exp2
+bad-image,llm-only-14b,moderate,rollback-deployment,exp2
+net-partition,hybrid-14b,moderate,revert-network-policy,exp2
+missing-config,hybrid-14b,moderate,rollback-deployment,exp2
+bad-image,hybrid-14b,moderate,rollback-deployment,exp2
+transient-crash,hybrid-14b,none (self-healed),,exp2
+log-injection,llm-only-14b,moderate,rollback-deployment,exp2
+transient-crash,llm-only-14b,none (self-healed),,exp2
+log-injection,hybrid-14b,moderate,rollback-deployment,exp2
+oom-kill,hybrid-14b,safe,patch-limits,exp2
+crashloop,hybrid-14b,moderate,rollback-deployment,exp2
+missing-config,llm-only-14b,moderate,rollback-deployment,exp2
+bad-image,hybrid-14b,moderate,rollback-deployment,exp2
+net-partition,hybrid-14b,moderate,revert-network-policy,exp2
+missing-config,llm-only-14b,moderate,rollback-deployment,exp2
+transient-crash,llm-only-14b,none (self-healed),,exp2
+pod-kill,hybrid-14b,none (self-healed),,exp2
+pod-kill,llm-only-14b,none (self-healed),,exp2
+crashloop,llm-only-14b,moderate,rollback-deployment,exp2
+oom-kill,hybrid-14b,safe,patch-limits,exp2
+oom-kill,llm-only-14b,safe,patch-limits,exp2
+log-injection,llm-only-14b,moderate,rollback-deployment,exp2
+net-partition,llm-only-14b,moderate,revert-network-policy,exp2
+transient-crash,hybrid-14b,none (self-healed),,exp2
+log-injection,hybrid-14b,moderate,rollback-deployment,exp2
+bad-image,llm-only-14b,moderate,rollback-deployment,exp2
+crashloop,hybrid-14b,moderate,rollback-deployment,exp2
+missing-config,hybrid-14b,moderate,rollback-deployment,exp2
+bad-image,llm-only-14b,moderate,rollback-deployment,exp2
+bad-image,hybrid-14b,moderate,rollback-deployment,exp2
+net-partition,llm-only-14b,moderate,revert-network-policy,exp2
+missing-config,llm-only-14b,moderate,rollback-deployment,exp2
+pod-kill,llm-only-14b,none (self-healed),,exp2
+pod-kill,hybrid-14b,none (self-healed),,exp2
+oom-kill,llm-only-14b,safe,patch-limits,exp2
+net-partition,hybrid-14b,moderate,revert-network-policy,exp2
+oom-kill,hybrid-14b,safe,patch-limits,exp2
+log-injection,llm-only-14b,moderate,rollback-deployment,exp2
+crashloop,hybrid-14b,moderate,rollback-deployment,exp2
+transient-crash,llm-only-14b,none (self-healed),,exp2
+crashloop,llm-only-14b,moderate,rollback-deployment,exp2
+missing-config,hybrid-14b,moderate,rollback-deployment,exp2
+transient-crash,hybrid-14b,none (self-healed),,exp2
+log-injection,hybrid-14b,moderate,rollback-deployment,exp2
+pod-kill,hybrid-14b,none (self-healed),,exp2
+oom-kill,hybrid-14b,safe,patch-limits,exp2
+crashloop,hybrid-14b,moderate,rollback-deployment,exp2
+missing-config,hybrid-14b,moderate,rollback-deployment,exp2
+crashloop,llm-only-14b,moderate,rollback-deployment,exp2
+log-injection,hybrid-14b,moderate,rollback-deployment,exp2
+missing-config,llm-only-14b,moderate,rollback-deployment,exp2
+bad-image,llm-only-14b,moderate,rollback-deployment,exp2
+transient-crash,llm-only-14b,none (self-healed),,exp2
+transient-crash,hybrid-14b,none (self-healed),,exp2
+bad-image,hybrid-14b,moderate,rollback-deployment,exp2
+pod-kill,llm-only-14b,none (self-healed),,exp2
+log-injection,llm-only-14b,moderate,rollback-deployment,exp2
+oom-kill,llm-only-14b,safe,patch-limits,exp2
+net-partition,llm-only-14b,moderate,revert-network-policy,exp2
+net-partition,hybrid-14b,moderate,revert-network-policy,exp2
+missing-secret,hybrid-tools,moderate,rollback-deployment,exp3
+memory-release,hybrid-tools,safe,patch-limits,exp3
+memory-release,llm-tools,safe,patch-limits,exp3
+pod-kill,hybrid-tools,none (self-healed),,exp3
+pod-kill,rules,none (self-healed),,exp3
+crash-release,llm-tools,moderate,rollback-deployment,exp3
+bad-image,hybrid,moderate,rollback-deployment,exp3
+pod-kill,llm-tools,none (self-healed),,exp3
+pod-kill,restart,none (self-healed),,exp3
+crash-release,hybrid-tools,moderate,rollback-deployment,exp3
+memory-release,rules,safe,patch-limits,exp3
+bad-image,llm-tools,moderate,rollback-deployment,exp3
+crash-release,rules,moderate,rollback-deployment,exp3
+bad-image,hybrid-tools,moderate,rollback-deployment,exp3
+crash-release,hybrid,moderate,rollback-deployment,exp3
+pod-kill,hybrid,none (self-healed),,exp3
+missing-secret,llm-tools,moderate,rollback-deployment,exp3
+memory-release,hybrid,safe,patch-limits,exp3
+memory-release,llm-tools,safe,patch-limits,exp3
+crash-release,hybrid-tools,moderate,rollback-deployment,exp3
+pod-kill,hybrid-tools,none (self-healed),,exp3
+pod-kill,hybrid,none (self-healed),,exp3
+bad-image,llm-tools,moderate,rollback-deployment,exp3
+crash-release,hybrid,moderate,rollback-deployment,exp3
+missing-secret,llm-tools,moderate,rollback-deployment,exp3
+crash-release,rules,moderate,rollback-deployment,exp3
+bad-image,hybrid-tools,moderate,rollback-deployment,exp3
+memory-release,hybrid-tools,safe,patch-limits,exp3
+pod-kill,rules,none (self-healed),,exp3
+missing-secret,hybrid-tools,moderate,rollback-deployment,exp3
+memory-release,rules,safe,patch-limits,exp3
+memory-release,hybrid,safe,patch-limits,exp3
+bad-image,hybrid,moderate,rollback-deployment,exp3
+pod-kill,llm-tools,none (self-healed),,exp3
+crash-release,llm-tools,moderate,rollback-deployment,exp3
+pod-kill,restart,none (self-healed),,exp3
+pod-kill,llm-tools,none (self-healed),,exp3
+crash-release,hybrid-tools,moderate,rollback-deployment,exp3
+bad-image,hybrid,moderate,rollback-deployment,exp3
+crash-release,rules,moderate,rollback-deployment,exp3
+crash-release,llm-tools,moderate,rollback-deployment,exp3
+memory-release,hybrid,safe,patch-limits,exp3
+bad-image,llm-tools,moderate,rollback-deployment,exp3
+bad-image,hybrid-tools,moderate,rollback-deployment,exp3
+pod-kill,rules,none (self-healed),,exp3
+pod-kill,hybrid-tools,none (self-healed),,exp3
+memory-release,llm-tools,moderate,rollback-deployment,exp3
+memory-release,rules,safe,patch-limits,exp3
+memory-release,hybrid-tools,safe,patch-limits,exp3
+missing-secret,llm-tools,moderate,rollback-deployment,exp3
+pod-kill,hybrid,none (self-healed),,exp3
+pod-kill,restart,none (self-healed),,exp3
+crash-release,hybrid,moderate,rollback-deployment,exp3
+missing-secret,llm-tools,moderate,rollback-deployment,exp3
+pod-kill,hybrid-tools,none (self-healed),,exp3
+memory-release,hybrid-tools,safe,patch-limits,exp3
+missing-secret,hybrid-tools,moderate,rollback-deployment,exp3
+bad-image,hybrid,moderate,rollback-deployment,exp3
+memory-release,rules,safe,patch-limits,exp3
+bad-image,llm-tools,moderate,rollback-deployment,exp3
+crash-release,hybrid,moderate,rollback-deployment,exp3
+memory-release,hybrid,safe,patch-limits,exp3
+bad-image,hybrid-tools,moderate,rollback-deployment,exp3
+pod-kill,rules,none (self-healed),,exp3
+pod-kill,restart,none (self-healed),,exp3
+pod-kill,hybrid,none (self-healed),,exp3
+crash-release,rules,moderate,rollback-deployment,exp3
+pod-kill,llm-tools,none (self-healed),,exp3
+crash-release,llm-tools,moderate,rollback-deployment,exp3
+crash-release,hybrid-tools,moderate,rollback-deployment,exp3
+memory-release,llm-tools,safe,patch-limits,exp3

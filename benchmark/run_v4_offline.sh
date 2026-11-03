@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# v4 offline studies. Run only after the live chain has finished
+# Manuscript v4 offline studies. Run only after the live chain has finished
 # (they share the CPU and the Ollama server with the agent):
 #   - prompt/family sensitivity for four more models (R1)
 #   - offline prompt-injection study for the 14B model

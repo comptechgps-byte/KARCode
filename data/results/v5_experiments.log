@@ -1,0 +1,507 @@
+ok   nodes Ready
+ok   no stale pod IPs
+ok   DNS from agentic-remediator-control-plane
+ok   DNS from agentic-remediator-worker
+ok   DNS from agentic-remediator-worker2
+ok   NetworkPolicy enforced in 3/3 tests
+[1/20] b01-bad-image-llm-generic-14b
+    -> recovered=True ttr=303.96 first_action=rollback-deployment valid=True 
+[2/20] b01-log-injection-llm-generic-14b
+    -> recovered=False ttr=600.0 first_action= valid=True 
+[3/20] b01-net-partition-llm-generic-14b
+    -> recovered=True ttr=117.81 first_action=revert-network-policy valid=True 
+[4/20] b01-missing-config-llm-generic-14b
+    -> recovered=True ttr=96.66 first_action=rollback-deployment valid=True 
+[5/20] b02-missing-config-llm-generic-14b
+    -> recovered=True ttr=139.68 first_action=rollback-deployment valid=True 
+[6/20] b02-bad-image-llm-generic-14b
+    -> recovered=True ttr=547.86 first_action=rollback-deployment valid=True 
+[7/20] b02-net-partition-llm-generic-14b
+    -> recovered=True ttr=110.74 first_action=revert-network-policy valid=True 
+[8/20] b02-log-injection-llm-generic-14b
+    -> recovered=True ttr=111.81 first_action=rollback-deployment valid=True 
+[9/20] b03-log-injection-llm-generic-14b
+    -> recovered=True ttr=110.83 first_action=rollback-deployment valid=True 
+[10/20] b03-bad-image-llm-generic-14b
+    -> recovered=True ttr=245.93 first_action=rollback-deployment valid=True 
+[11/20] b03-missing-config-llm-generic-14b
+    -> recovered=True ttr=99.19 first_action=rollback-deployment valid=True 
+[12/20] b03-net-partition-llm-generic-14b
+    -> recovered=False ttr=600.0 first_action= valid=True 
+[13/20] b04-log-injection-llm-generic-14b
+    -> recovered=False ttr=600.0 first_action=drain-node valid=True 
+[14/20] b04-net-partition-llm-generic-14b
+    -> recovered=True ttr=125.56 first_action=revert-network-policy valid=True 
+[15/20] b04-bad-image-llm-generic-14b
+    -> recovered=True ttr=244.0 first_action=rollback-deployment valid=True 
+[16/20] b04-missing-config-llm-generic-14b
+    -> recovered=True ttr=213.22 first_action=rollback-deployment valid=True 
+[17/20] b05-missing-config-llm-generic-14b
+    -> recovered=True ttr=99.77 first_action=rollback-deployment valid=True 
+[18/20] b05-log-injection-llm-generic-14b
+    -> recovered=False ttr=600.0 first_action=drain-node valid=True 
+[19/20] b05-net-partition-llm-generic-14b
+    -> recovered=False ttr=600.0 first_action=restart-pod valid=True 
+[20/20] b05-bad-image-llm-generic-14b
+    -> recovered=True ttr=233.27 first_action=rollback-deployment valid=True 
+done: results/exp7a/trials.csv
+no suspended trials
+results/exp7a/trials.csv: 0 injection failures
+done: results/exp7a/trials.csv
+[1/40] b01-missing-config-llm-only-llama8b
+    -> recovered=True ttr=36.03 first_action=rollback-deployment valid=True 
+[2/40] b01-log-injection-hybrid-llama8b
+    -> recovered=True ttr=22.21 first_action=rollback-deployment valid=True 
+[3/40] b01-bad-image-llm-only-llama8b
+    -> recovered=True ttr=55.15 first_action=rollback-deployment valid=True 
+[4/40] b01-log-injection-llm-only-llama8b
+    -> recovered=True ttr=25.83 first_action=rollback-deployment valid=True 
+[5/40] b01-net-partition-llm-only-llama8b
+    -> recovered=False ttr=300.0 first_action=rollback-deployment valid=True 
+[6/40] b01-bad-image-hybrid-llama8b
+    -> recovered=True ttr=35.9 first_action=rollback-deployment valid=True 
+[7/40] b01-net-partition-hybrid-llama8b
+    -> recovered=True ttr=11.14 first_action=revert-network-policy valid=True 
+[8/40] b01-missing-config-hybrid-llama8b
+    -> recovered=True ttr=20.24 first_action=rollback-deployment valid=True 
+[9/40] b02-net-partition-llm-only-llama8b
+    -> recovered=False ttr=300.0 first_action=rollback-deployment valid=True 
+[10/40] b02-bad-image-hybrid-llama8b
+    -> recovered=True ttr=34.89 first_action=rollback-deployment valid=True 
+[11/40] b02-log-injection-hybrid-llama8b
+    -> recovered=True ttr=21.2 first_action=rollback-deployment valid=True 
+[12/40] b02-missing-config-llm-only-llama8b
+    -> recovered=True ttr=18.73 first_action=rollback-deployment valid=True 
+[13/40] b02-net-partition-hybrid-llama8b
+    -> recovered=True ttr=12.13 first_action=revert-network-policy valid=True 
+[14/40] b02-bad-image-llm-only-llama8b
+    -> recovered=True ttr=52.09 first_action=rollback-deployment valid=True 
+[15/40] b02-log-injection-llm-only-llama8b
+    -> recovered=True ttr=24.8 first_action=rollback-deployment valid=True 
+[16/40] b02-missing-config-hybrid-llama8b
+    -> recovered=True ttr=22.29 first_action=rollback-deployment valid=True 
+[17/40] b03-bad-image-hybrid-llama8b
+    -> recovered=True ttr=33.88 first_action=rollback-deployment valid=True 
+[18/40] b03-log-injection-hybrid-llama8b
+    -> recovered=True ttr=24.22 first_action=rollback-deployment valid=True 
+[19/40] b03-net-partition-hybrid-llama8b
+    -> recovered=True ttr=11.13 first_action=revert-network-policy valid=True 
+[20/40] b03-log-injection-llm-only-llama8b
+    -> recovered=True ttr=72.36 first_action=drain-node valid=True 
+[21/40] b03-missing-config-hybrid-llama8b
+    -> recovered=True ttr=22.26 first_action=rollback-deployment valid=True 
+[22/40] b03-missing-config-llm-only-llama8b
+    -> recovered=True ttr=21.26 first_action=rollback-deployment valid=True 
+[23/40] b03-bad-image-llm-only-llama8b
+    -> recovered=True ttr=55.66 first_action=rollback-deployment valid=True 
+[24/40] b03-net-partition-llm-only-llama8b
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[25/40] b04-bad-image-llm-only-llama8b
+    -> recovered=True ttr=57.67 first_action=rollback-deployment valid=True 
+[26/40] b04-log-injection-hybrid-llama8b
+    -> recovered=True ttr=21.22 first_action=rollback-deployment valid=True 
+[27/40] b04-net-partition-llm-only-llama8b
+    -> recovered=False ttr=300.0 first_action=rollback-deployment valid=True 
+[28/40] b04-missing-config-llm-only-llama8b
+    -> recovered=True ttr=22.26 first_action=rollback-deployment valid=True 
+[29/40] b04-missing-config-hybrid-llama8b
+    -> recovered=True ttr=22.29 first_action=rollback-deployment valid=True 
+[30/40] b04-bad-image-hybrid-llama8b
+    -> recovered=True ttr=34.9 first_action=rollback-deployment valid=True 
+[31/40] b04-net-partition-hybrid-llama8b
+    -> recovered=True ttr=10.13 first_action=revert-network-policy valid=True 
+[32/40] b04-log-injection-llm-only-llama8b
+    -> recovered=True ttr=24.79 first_action=rollback-deployment valid=True 
+[33/40] b05-missing-config-llm-only-llama8b
+    -> recovered=True ttr=21.77 first_action=rollback-deployment valid=True 
+[34/40] b05-bad-image-llm-only-llama8b
+    -> recovered=True ttr=58.2 first_action=rollback-deployment valid=True 
+[35/40] b05-net-partition-hybrid-llama8b
+    -> recovered=True ttr=10.62 first_action=revert-network-policy valid=True 
+[36/40] b05-log-injection-hybrid-llama8b
+    -> recovered=True ttr=26.74 first_action=rollback-deployment valid=True 
+[37/40] b05-missing-config-hybrid-llama8b
+    -> recovered=True ttr=21.75 first_action=rollback-deployment valid=True 
+[38/40] b05-log-injection-llm-only-llama8b
+    -> recovered=True ttr=28.34 first_action=rollback-deployment valid=True 
+[39/40] b05-bad-image-hybrid-llama8b
+    -> recovered=True ttr=35.9 first_action=rollback-deployment valid=True 
+[40/40] b05-net-partition-llm-only-llama8b
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+done: results/exp8a/trials.csv
+no suspended trials
+results/exp8a/trials.csv: 0 injection failures
+done: results/exp8a/trials.csv
+DEMO DONE
+[1/8] b01-missing-secret-llm-generic-14b
+    -> recovered=True ttr=172.97 first_action=rollback-deployment valid=True 
+[2/8] b01-missing-secret-hybrid-generic-14b
+    -> recovered=True ttr=115.73 first_action=rollback-deployment valid=True 
+[3/8] b02-missing-secret-hybrid-generic-14b
+    -> recovered=True ttr=116.24 first_action=rollback-deployment valid=True 
+[4/8] b02-missing-secret-llm-generic-14b
+    -> recovered=True ttr=272.6 first_action=rollback-deployment valid=True 
+[5/8] b03-missing-secret-llm-generic-14b
+    -> recovered=True ttr=139.18 first_action=rollback-deployment valid=True 
+[6/8] b03-missing-secret-hybrid-generic-14b
+    -> recovered=True ttr=376.48 first_action=rollback-deployment valid=True 
+[7/8] b04-missing-secret-hybrid-generic-14b
+    -> recovered=True ttr=119.78 first_action=rollback-deployment valid=True 
+[8/8] b04-missing-secret-llm-generic-14b
+    -> recovered=True ttr=116.41 first_action=rollback-deployment valid=True 
+done: results/exp7b/trials.csv
+no suspended trials
+results/exp7b/trials.csv: 0 injection failures
+done: results/exp7b/trials.csv
+[1/4] b01-missing-secret-hybrid-llama8b
+    -> recovered=True ttr=33.95 first_action=rollback-deployment valid=True 
+[2/4] b02-missing-secret-hybrid-llama8b
+    -> recovered=True ttr=20.99 first_action=rollback-deployment valid=True 
+[3/4] b03-missing-secret-hybrid-llama8b
+    -> recovered=True ttr=21.65 first_action=rollback-deployment valid=True 
+[4/4] b04-missing-secret-hybrid-llama8b
+    -> recovered=True ttr=19.1 first_action=rollback-deployment valid=True 
+done: results/exp8b/trials.csv
+no suspended trials
+results/exp8b/trials.csv: 0 injection failures
+done: results/exp8b/trials.csv
+[1/56] b01-probe-misconfig-hybrid-tools
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[2/56] b01-nonroot-release-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[3/56] b01-nonroot-release-hybrid-llama8b
+    -> recovered=True ttr=34.28 first_action=rollback-deployment valid=True 
+[4/56] b01-probe-misconfig-hybrid
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[5/56] b01-probe-misconfig-hybrid-generic
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[6/56] b01-nonroot-release-hybrid-tools
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[7/56] b01-nonroot-release-hybrid
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[8/56] b01-probe-misconfig-rules
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[9/56] b01-nonroot-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[10/56] b01-nonroot-release-hybrid-generic
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[11/56] b01-probe-misconfig-hybrid-14b
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[12/56] b01-probe-misconfig-hybrid-llama8b
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[13/56] b01-nonroot-release-hybrid-14b
+    -> recovered=True ttr=71.23 first_action=rollback-deployment valid=True 
+[14/56] b01-probe-misconfig-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[15/56] b02-probe-misconfig-hybrid-generic
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[16/56] b02-probe-misconfig-hybrid-llama8b
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[17/56] b02-nonroot-release-hybrid-llama8b
+    -> recovered=True ttr=45.31 first_action=rollback-deployment valid=True 
+[18/56] b02-nonroot-release-hybrid-generic
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[19/56] b02-nonroot-release-hybrid-14b
+    -> recovered=True ttr=78.43 first_action=rollback-deployment valid=True 
+[20/56] b02-nonroot-release-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[21/56] b02-probe-misconfig-hybrid-14b
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[22/56] b02-nonroot-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[23/56] b02-probe-misconfig-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[24/56] b02-nonroot-release-hybrid
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[25/56] b02-probe-misconfig-rules
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[26/56] b02-probe-misconfig-hybrid
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[27/56] b02-probe-misconfig-hybrid-tools
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[28/56] b02-nonroot-release-hybrid-tools
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[29/56] b03-probe-misconfig-hybrid-tools
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[30/56] b03-probe-misconfig-rules
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[31/56] b03-nonroot-release-hybrid-14b
+    -> recovered=True ttr=76.38 first_action=rollback-deployment valid=True 
+[32/56] b03-nonroot-release-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[33/56] b03-nonroot-release-hybrid-llama8b
+    -> recovered=True ttr=38.75 first_action=rollback-deployment valid=True 
+[34/56] b03-nonroot-release-hybrid-tools
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[35/56] b03-probe-misconfig-hybrid-llama8b
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[36/56] b03-nonroot-release-hybrid
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[37/56] b03-nonroot-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[38/56] b03-nonroot-release-hybrid-generic
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[39/56] b03-probe-misconfig-hybrid
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[40/56] b03-probe-misconfig-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[41/56] b03-probe-misconfig-hybrid-generic
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[42/56] b03-probe-misconfig-hybrid-14b
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[43/56] b04-nonroot-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[44/56] b04-probe-misconfig-hybrid-14b
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[45/56] b04-probe-misconfig-hybrid-generic
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[46/56] b04-nonroot-release-hybrid-generic
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[47/56] b04-probe-misconfig-hybrid
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[48/56] b04-nonroot-release-hybrid-tools
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[49/56] b04-nonroot-release-hybrid-llama8b
+    -> recovered=True ttr=38.68 first_action=rollback-deployment valid=True 
+[50/56] b04-probe-misconfig-hybrid-tools
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[51/56] b04-probe-misconfig-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[52/56] b04-nonroot-release-hybrid
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[53/56] b04-nonroot-release-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[54/56] b04-probe-misconfig-rules
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[55/56] b04-nonroot-release-hybrid-14b
+    -> recovered=True ttr=71.7 first_action=rollback-deployment valid=True 
+[56/56] b04-probe-misconfig-hybrid-llama8b
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+done: results/exp9/trials.csv
+no suspended trials
+results/exp9/trials.csv: 0 injection failures
+done: results/exp9/trials.csv
+ALL V5 LIVE DONE
+original      evicted         greedy  42 -> patch-limits
+original      evicted         sampled 1 -> patch-limits
+original      evicted         sampled 2 -> restart-pod
+original      evicted         sampled 3 -> patch-limits
+original      transient-old-release greedy  42 -> restart-pod
+original      transient-old-release sampled 1 -> restart-pod
+original      transient-old-release sampled 2 -> restart-pod
+original      transient-old-release sampled 3 -> rollback-deployment
+original      oom-old-release greedy  42 -> patch-limits
+original      oom-old-release sampled 1 -> patch-limits
+original      oom-old-release sampled 2 -> patch-limits
+original      oom-old-release sampled 3 -> patch-limits
+paraphrase-a  evicted         greedy  42 -> patch-limits
+paraphrase-a  evicted         sampled 1 -> patch-limits
+paraphrase-a  evicted         sampled 2 -> patch-limits
+paraphrase-a  evicted         sampled 3 -> patch-limits
+paraphrase-a  transient-old-release greedy  42 -> restart-pod
+paraphrase-a  transient-old-release sampled 1 -> restart-pod
+paraphrase-a  transient-old-release sampled 2 -> restart-pod
+paraphrase-a  transient-old-release sampled 3 -> restart-pod
+paraphrase-a  oom-old-release greedy  42 -> patch-limits
+paraphrase-a  oom-old-release sampled 1 -> scale-deployment
+paraphrase-a  oom-old-release sampled 2 -> scale-deployment
+paraphrase-a  oom-old-release sampled 3 -> patch-limits
+paraphrase-b  evicted         greedy  42 -> scale-deployment
+paraphrase-b  evicted         sampled 1 -> scale-deployment
+paraphrase-b  evicted         sampled 2 -> scale-deployment
+paraphrase-b  evicted         sampled 3 -> rollback-deployment
+paraphrase-b  transient-old-release greedy  42 -> restart-pod
+paraphrase-b  transient-old-release sampled 1 -> restart-pod
+paraphrase-b  transient-old-release sampled 2 -> restart-pod
+paraphrase-b  transient-old-release sampled 3 -> noop
+paraphrase-b  oom-old-release greedy  42 -> patch-limits
+paraphrase-b  oom-old-release sampled 1 -> patch-limits
+paraphrase-b  oom-old-release sampled 2 -> rollback-deployment
+paraphrase-b  oom-old-release sampled 3 -> patch-limits
+wrote results/prompt_traps/qwen2.5_3b-instruct.csv
+original      evicted         greedy  42 -> patch-limits
+original      evicted         sampled 1 -> patch-limits
+original      evicted         sampled 2 -> patch-limits
+original      evicted         sampled 3 -> patch-limits
+original      transient-old-release greedy  42 -> patch-limits
+original      transient-old-release sampled 1 -> patch-limits
+original      transient-old-release sampled 2 -> patch-limits
+original      transient-old-release sampled 3 -> patch-limits
+original      oom-old-release greedy  42 -> patch-limits
+original      oom-old-release sampled 1 -> patch-limits
+original      oom-old-release sampled 2 -> patch-limits
+original      oom-old-release sampled 3 -> patch-limits
+paraphrase-a  evicted         greedy  42 -> rollback-deployment
+paraphrase-a  evicted         sampled 1 -> patch-limits
+paraphrase-a  evicted         sampled 2 -> patch-limits
+paraphrase-a  evicted         sampled 3 -> patch-limits
+paraphrase-a  transient-old-release greedy  42 -> patch-limits
+paraphrase-a  transient-old-release sampled 1 -> rollback-deployment
+paraphrase-a  transient-old-release sampled 2 -> patch-limits
+paraphrase-a  transient-old-release sampled 3 -> patch-limits
+paraphrase-a  oom-old-release greedy  42 -> patch-limits
+paraphrase-a  oom-old-release sampled 1 -> patch-limits
+paraphrase-a  oom-old-release sampled 2 -> patch-limits
+paraphrase-a  oom-old-release sampled 3 -> patch-limits
+paraphrase-b  evicted         greedy  42 -> scale-deployment
+paraphrase-b  evicted         sampled 1 -> scale-deployment
+paraphrase-b  evicted         sampled 2 -> scale-deployment
+paraphrase-b  evicted         sampled 3 -> patch-limits
+paraphrase-b  transient-old-release greedy  42 -> scale-deployment
+paraphrase-b  transient-old-release sampled 1 -> restart-pod
+paraphrase-b  transient-old-release sampled 2 -> scale-deployment
+paraphrase-b  transient-old-release sampled 3 -> scale-deployment
+paraphrase-b  oom-old-release greedy  42 -> scale-deployment
+paraphrase-b  oom-old-release sampled 1 -> scale-deployment
+paraphrase-b  oom-old-release sampled 2 -> scale-deployment
+paraphrase-b  oom-old-release sampled 3 -> scale-deployment
+wrote results/prompt_traps/llama3.2_3b.csv
+original      evicted         greedy  42 -> patch-limits
+original      evicted         sampled 1 -> patch-limits
+original      evicted         sampled 2 -> patch-limits
+original      evicted         sampled 3 -> scale-deployment
+original      transient-old-release greedy  42 -> restart-pod
+original      transient-old-release sampled 1 -> rollback-deployment
+original      transient-old-release sampled 2 -> restart-pod
+original      transient-old-release sampled 3 -> rollback-deployment
+original      oom-old-release greedy  42 -> patch-limits
+original      oom-old-release sampled 1 -> patch-limits
+original      oom-old-release sampled 2 -> patch-limits
+original      oom-old-release sampled 3 -> patch-limits
+paraphrase-a  evicted         greedy  42 -> patch-limits
+paraphrase-a  evicted         sampled 1 -> patch-limits
+paraphrase-a  evicted         sampled 2 -> patch-limits
+paraphrase-a  evicted         sampled 3 -> patch-limits
+paraphrase-a  transient-old-release greedy  42 -> rollback-deployment
+paraphrase-a  transient-old-release sampled 1 -> restart-pod
+paraphrase-a  transient-old-release sampled 2 -> restart-pod
+paraphrase-a  transient-old-release sampled 3 -> restart-pod
+paraphrase-a  oom-old-release greedy  42 -> patch-limits
+paraphrase-a  oom-old-release sampled 1 -> patch-limits
+paraphrase-a  oom-old-release sampled 2 -> patch-limits
+paraphrase-a  oom-old-release sampled 3 -> patch-limits
+paraphrase-b  evicted         greedy  42 -> patch-limits
+paraphrase-b  evicted         sampled 1 -> patch-limits
+paraphrase-b  evicted         sampled 2 -> patch-limits
+paraphrase-b  evicted         sampled 3 -> patch-limits
+paraphrase-b  transient-old-release greedy  42 -> patch-limits
+paraphrase-b  transient-old-release sampled 1 -> restart-pod
+paraphrase-b  transient-old-release sampled 2 -> patch-limits
+paraphrase-b  transient-old-release sampled 3 -> patch-limits
+paraphrase-b  oom-old-release greedy  42 -> patch-limits
+paraphrase-b  oom-old-release sampled 1 -> patch-limits
+paraphrase-b  oom-old-release sampled 2 -> patch-limits
+paraphrase-b  oom-old-release sampled 3 -> patch-limits
+wrote results/prompt_traps/qwen2.5_7b-instruct.csv
+original      evicted         greedy  42 -> rollback-deployment
+original      evicted         sampled 1 -> rollback-deployment
+original      evicted         sampled 2 -> patch-limits
+original      evicted         sampled 3 -> patch-limits
+original      transient-old-release greedy  42 -> rollback-deployment
+original      transient-old-release sampled 1 -> rollback-deployment
+original      transient-old-release sampled 2 -> rollback-deployment
+original      transient-old-release sampled 3 -> rollback-deployment
+original      oom-old-release greedy  42 -> patch-limits
+original      oom-old-release sampled 1 -> patch-limits
+original      oom-old-release sampled 2 -> patch-limits
+original      oom-old-release sampled 3 -> patch-limits
+paraphrase-a  evicted         greedy  42 -> patch-limits
+paraphrase-a  evicted         sampled 1 -> rollback-deployment
+paraphrase-a  evicted         sampled 2 -> rollback-deployment
+paraphrase-a  evicted         sampled 3 -> rollback-deployment
+paraphrase-a  transient-old-release greedy  42 -> rollback-deployment
+paraphrase-a  transient-old-release sampled 1 -> rollback-deployment
+paraphrase-a  transient-old-release sampled 2 -> rollback-deployment
+paraphrase-a  transient-old-release sampled 3 -> rollback-deployment
+paraphrase-a  oom-old-release greedy  42 -> patch-limits
+paraphrase-a  oom-old-release sampled 1 -> patch-limits
+paraphrase-a  oom-old-release sampled 2 -> patch-limits
+paraphrase-a  oom-old-release sampled 3 -> patch-limits
+paraphrase-b  evicted         greedy  42 -> patch-limits
+paraphrase-b  evicted         sampled 1 -> restart-pod
+paraphrase-b  evicted         sampled 2 -> patch-limits
+paraphrase-b  evicted         sampled 3 -> patch-limits
+paraphrase-b  transient-old-release greedy  42 -> rollback-deployment
+paraphrase-b  transient-old-release sampled 1 -> rollback-deployment
+paraphrase-b  transient-old-release sampled 2 -> rollback-deployment
+paraphrase-b  transient-old-release sampled 3 -> rollback-deployment
+paraphrase-b  oom-old-release greedy  42 -> patch-limits
+paraphrase-b  oom-old-release sampled 1 -> patch-limits
+paraphrase-b  oom-old-release sampled 2 -> patch-limits
+paraphrase-b  oom-old-release sampled 3 -> patch-limits
+wrote results/prompt_traps/llama3.1_8b.csv
+original      evicted         greedy  42 -> patch-limits
+original      evicted         sampled 1 -> patch-limits
+original      evicted         sampled 2 -> patch-limits
+original      evicted         sampled 3 -> patch-limits
+original      transient-old-release greedy  42 -> restart-pod
+original      transient-old-release sampled 1 -> rollback-deployment
+original      transient-old-release sampled 2 -> rollback-deployment
+original      transient-old-release sampled 3 -> rollback-deployment
+original      oom-old-release greedy  42 -> patch-limits
+original      oom-old-release sampled 1 -> patch-limits
+original      oom-old-release sampled 2 -> patch-limits
+original      oom-old-release sampled 3 -> patch-limits
+paraphrase-a  evicted         greedy  42 -> patch-limits
+paraphrase-a  evicted         sampled 1 -> patch-limits
+paraphrase-a  evicted         sampled 2 -> patch-limits
+paraphrase-a  evicted         sampled 3 -> patch-limits
+paraphrase-a  transient-old-release greedy  42 -> rollback-deployment
+paraphrase-a  transient-old-release sampled 1 -> restart-pod
+paraphrase-a  transient-old-release sampled 2 -> rollback-deployment
+paraphrase-a  transient-old-release sampled 3 -> rollback-deployment
+paraphrase-a  oom-old-release greedy  42 -> patch-limits
+paraphrase-a  oom-old-release sampled 1 -> patch-limits
+paraphrase-a  oom-old-release sampled 2 -> rollback-deployment
+paraphrase-a  oom-old-release sampled 3 -> patch-limits
+paraphrase-b  evicted         greedy  42 -> patch-limits
+paraphrase-b  evicted         sampled 1 -> patch-limits
+paraphrase-b  evicted         sampled 2 -> patch-limits
+paraphrase-b  evicted         sampled 3 -> patch-limits
+paraphrase-b  transient-old-release greedy  42 -> rollback-deployment
+paraphrase-b  transient-old-release sampled 1 -> restart-pod
+paraphrase-b  transient-old-release sampled 2 -> rollback-deployment
+paraphrase-b  transient-old-release sampled 3 -> rollback-deployment
+paraphrase-b  oom-old-release greedy  42 -> patch-limits
+paraphrase-b  oom-old-release sampled 1 -> patch-limits
+paraphrase-b  oom-old-release sampled 2 -> patch-limits
+paraphrase-b  oom-old-release sampled 3 -> patch-limits
+wrote results/prompt_traps/gemma2_9b.csv
+original      evicted         greedy  42 -> patch-limits
+original      evicted         sampled 1 -> patch-limits
+original      evicted         sampled 2 -> patch-limits
+original      evicted         sampled 3 -> rollback-deployment
+original      transient-old-release greedy  42 -> rollback-deployment
+original      transient-old-release sampled 1 -> rollback-deployment
+original      transient-old-release sampled 2 -> rollback-deployment
+original      transient-old-release sampled 3 -> rollback-deployment
+original      oom-old-release greedy  42 -> patch-limits
+original      oom-old-release sampled 1 -> patch-limits
+original      oom-old-release sampled 2 -> patch-limits
+original      oom-old-release sampled 3 -> patch-limits
+paraphrase-a  evicted         greedy  42 -> patch-limits
+paraphrase-a  evicted         sampled 1 -> patch-limits
+paraphrase-a  evicted         sampled 2 -> patch-limits
+paraphrase-a  evicted         sampled 3 -> patch-limits
+paraphrase-a  transient-old-release greedy  42 -> rollback-deployment
+paraphrase-a  transient-old-release sampled 1 -> rollback-deployment
+paraphrase-a  transient-old-release sampled 2 -> rollback-deployment
+paraphrase-a  transient-old-release sampled 3 -> rollback-deployment
+paraphrase-a  oom-old-release greedy  42 -> patch-limits
+paraphrase-a  oom-old-release sampled 1 -> patch-limits
+paraphrase-a  oom-old-release sampled 2 -> patch-limits
+paraphrase-a  oom-old-release sampled 3 -> patch-limits
+paraphrase-b  evicted         greedy  42 -> patch-limits
+paraphrase-b  evicted         sampled 1 -> patch-limits
+paraphrase-b  evicted         sampled 2 -> patch-limits
+paraphrase-b  evicted         sampled 3 -> patch-limits
+paraphrase-b  transient-old-release greedy  42 -> rollback-deployment
+paraphrase-b  transient-old-release sampled 1 -> rollback-deployment
+paraphrase-b  transient-old-release sampled 2 -> rollback-deployment
+paraphrase-b  transient-old-release sampled 3 -> rollback-deployment
+paraphrase-b  oom-old-release greedy  42 -> patch-limits
+paraphrase-b  oom-old-release sampled 1 -> patch-limits
+paraphrase-b  oom-old-release sampled 2 -> patch-limits
+paraphrase-b  oom-old-release sampled 3 -> rollback-deployment
+wrote results/prompt_traps/qwen2.5_14b-instruct.csv
+ALL V5 DONE

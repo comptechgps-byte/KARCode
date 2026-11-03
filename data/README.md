@@ -1,7 +1,11 @@
 # Experimental data
 
 `results/` holds every run behind the article: trial-level results, the agent's decision
-logs and run metadata, To re-run the analysis on these data, make them visible where the scripts expect them:
+logs and run metadata, plus the offline studies. `audit-v1.md` documents the audit of the
+earlier (withdrawn) v1 prototype that motivated the measurement pitfalls discussed in the
+article.
+
+To re-run the analysis on these data, make them visible where the scripts expect them:
 
 ```bash
 ln -s data/results results        # Windows: mklink /D results data\results
@@ -61,6 +65,20 @@ manifest file, so any deviation from the frozen version is detectable.
   action detail, LLM latency, tokens and tool calls. Re-runs reuse a `trial_id`;
   `benchmark/analyze_results.load_events` matches events to the valid run by time.
 - `run_meta_*.json`: arguments, software versions, agent image ID, and SHA-256 of the
-  frozen agent code and manifests at the start of each invocation.  all runs used Ollama.
+  frozen agent code and manifests at the start of each invocation. The recorded agent
+  environment lists an optional `ANTHROPIC_API_KEY` reference to a Kubernetes Secret; no
+  key was set, and all runs used Ollama.
 - `*.log` (top level): console output of the experiment chains.
 
+## Not reported (kept for transparency)
+
+| Folder | Why it was set aside |
+|---|---|
+| `discarded/exp2a_ctx_reload/` | Experiment 2a first launch: Ollama reloaded the model between two context sizes, inflating LLM latency; agent v2.1.1 uses a single context size and the experiment was re-run. |
+| `discarded/exp2b_memory_pressure/` | Experiment 2b first run: the Docker VM swapped with the 14B model resident and NetworkPolicy enforcement degraded; re-run in full with more VM memory. |
+| `discarded/exp3_memory_pressure/` | Experiment 3 first launch stopped before its first trial completed (memory pressure). |
+| `discarded/exp3_dns_fault/` | Experiment 3: 36 trials affected by intermittent cluster DNS failures after a host reboot (a CoreDNS pod kept a stale IP); Experiment 3 restarted from scratch, and the harness now checks for stale pod IPs before every trial. |
+| `discarded_exp7a_tau300/` | Experiment 7, first trial: with a 300 s window the 14B tool loop was cut off by CPU speed; Experiment 7 was re-run with a 600 s window (outcomes at 300 s are also reported). |
+| `discarded_v31_clearbug/` | Experiment 10a, first trial: agent build that cleared its failure record when any pod of the workload was Ready, so escalation never fired; fixed and re-frozen as v3.1 before the reported run. |
+| `prompt_sensitivity/discarded/` | Gemma-2-9B calls made while the model was missing from Ollama; superseded by the valid re-run (see the note in that folder). |
+| `pilot/`, `smoke*/`, `boutique_validation/`, `validation_v5/` | Development, smoke and injector-validation runs (the latter with the agent switched off). |

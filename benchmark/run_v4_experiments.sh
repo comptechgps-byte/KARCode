@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Setup Code Logic developed By Abhijeet bAJPAYEE v4 experiments (agent unchanged: v3.0).
+# Manuscript v4 experiments (agent unchanged: v3.0).
 #   Exp 6 — step-limit ablation: generic tools with 6 instead of 3 tool calls,
 #           on the faults the generic modes failed (+ missing-config as control).
 #   Exp 2a-R — replication of Experiment 2a (same conditions, same seed), which

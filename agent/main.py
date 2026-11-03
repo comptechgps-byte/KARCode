@@ -1,5 +1,4 @@
 """
-Developed and Edited by Abhijeet Bajpayee
 main.py — the agent's closed control loop:
 
     observe   list pods, build snapshots (telemetry.py)

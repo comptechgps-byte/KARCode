@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# v6 experiments — agent v3.1 (failure-triggered escalation).
+# Manuscript v6 experiments — agent v3.1 (failure-triggered escalation).
 #   Exp 10a — the rule-misfire fault of Exp 9 (probe-misconfig) under failure-triggered
 #             escalation, three models
 #   Exp 10b/c — regression: rule-covered and self-healing faults must behave as before

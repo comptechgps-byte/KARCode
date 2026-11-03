@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Developed and Edited by Abhijeet Bajpayee
 prompt_sensitivity.py — does the LLM's remedy depend on how the system prompt
 is worded? (manuscript v3)
 

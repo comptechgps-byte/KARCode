@@ -1,4 +1,4 @@
-""" Developed and Edited by Abhijeet Bajpayee
+"""
 safety.py — the approval gate between "the agent decided X" and "X actually
 happens to the cluster". Checks, in order (first failure rejects):
 

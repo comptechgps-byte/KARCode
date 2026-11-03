@@ -1,0 +1,49 @@
+model,prompt,fault,decoding,seed,action,correct,fault_class,latency_s
+qwen2.5:3b-instruct,original,dependency-down,greedy,42,restart-pod,False,readiness_probe_failure,15.721
+qwen2.5:3b-instruct,original,dependency-down,sampled,1,rollback-deployment,False,readiness_problems,3.692
+qwen2.5:3b-instruct,original,dependency-down,sampled,2,rollback-deployment,False,readiness_probe_failure,3.949
+qwen2.5:3b-instruct,original,dependency-down,sampled,3,rollback-deployment,False,readiness_probe_failure,3.177
+qwen2.5:3b-instruct,original,external-config-change,greedy,42,rollback-deployment,False,ContainerCrashLoopBackOff,8.146
+qwen2.5:3b-instruct,original,external-config-change,sampled,1,rollback-deployment,False,Container CrashLoopBackOff,3.99
+qwen2.5:3b-instruct,original,external-config-change,sampled,2,rollback-deployment,False,container_error,3.462
+qwen2.5:3b-instruct,original,external-config-change,sampled,3,rollback-deployment,False,ContainerCrashLoopBackOff,3.455
+qwen2.5:3b-instruct,original,node-lost,greedy,42,rollback-deployment,False,DeploymentOutOfSync,6.31
+qwen2.5:3b-instruct,original,node-lost,sampled,1,scale-deployment,False,DeploymentStuckInPending,3.621
+qwen2.5:3b-instruct,original,node-lost,sampled,2,scale-deployment,False,pod_phase_unhealthy,3.452
+qwen2.5:3b-instruct,original,node-lost,sampled,3,rollback-deployment,False,DeploymentOutOfSync,3.105
+qwen2.5:3b-instruct,original,cert-expired,greedy,42,rollback-deployment,False,ContainerCrashLoopBackOff,8.035
+qwen2.5:3b-instruct,original,cert-expired,sampled,1,rollback-deployment,False,container_image_or_configuration_issue,3.29
+qwen2.5:3b-instruct,original,cert-expired,sampled,2,rollback-deployment,False,ContainerError,3.986
+qwen2.5:3b-instruct,original,cert-expired,sampled,3,rollback-deployment,False,container_crash_loop,3.348
+qwen2.5:3b-instruct,paraphrase-a,dependency-down,greedy,42,rollback-deployment,False,readiness_probe_failure,11.648
+qwen2.5:3b-instruct,paraphrase-a,dependency-down,sampled,1,rollback-deployment,False,readiness-probe-failure,3.53
+qwen2.5:3b-instruct,paraphrase-a,dependency-down,sampled,2,rollback-deployment,False,ReadinessProbeFailure,3.3
+qwen2.5:3b-instruct,paraphrase-a,dependency-down,sampled,3,rollback-deployment,False,readiness_probe_failure,3.351
+qwen2.5:3b-instruct,paraphrase-a,external-config-change,greedy,42,rollback-deployment,False,ContainerCrashLoop,7.292
+qwen2.5:3b-instruct,paraphrase-a,external-config-change,sampled,1,rollback-deployment,False,container_restart_failure,3.145
+qwen2.5:3b-instruct,paraphrase-a,external-config-change,sampled,2,rollback-deployment,False,ContainerCrashLoopBackOff,4.414
+qwen2.5:3b-instruct,paraphrase-a,external-config-change,sampled,3,rollback-deployment,False,container_crash_loop,3.948
+qwen2.5:3b-instruct,paraphrase-a,node-lost,greedy,42,rollback-deployment,False,DeploymentOutOfSync,7.101
+qwen2.5:3b-instruct,paraphrase-a,node-lost,sampled,1,rollback-deployment,False,DeploymentOutOfDate,3.509
+qwen2.5:3b-instruct,paraphrase-a,node-lost,sampled,2,revert-network-policy,False,UnknownPodPhase,3.623
+qwen2.5:3b-instruct,paraphrase-a,node-lost,sampled,3,rollback-deployment,False,pod_phase_unknown,3.906
+qwen2.5:3b-instruct,paraphrase-a,cert-expired,greedy,42,rollback-deployment,False,container_crash,7.38
+qwen2.5:3b-instruct,paraphrase-a,cert-expired,sampled,1,rollback-deployment,False,ContainerCrash,3.623
+qwen2.5:3b-instruct,paraphrase-a,cert-expired,sampled,2,rollback-deployment,False,container_crash_loop,3.361
+qwen2.5:3b-instruct,paraphrase-a,cert-expired,sampled,3,rollback-deployment,False,ContainerCrash,3.797
+qwen2.5:3b-instruct,paraphrase-b,dependency-down,greedy,42,restart-pod,False,Transient,12.081
+qwen2.5:3b-instruct,paraphrase-b,dependency-down,sampled,1,rollback-deployment,False,Transient,2.765
+qwen2.5:3b-instruct,paraphrase-b,dependency-down,sampled,2,rollback-deployment,False,readiness_probe_failure,2.868
+qwen2.5:3b-instruct,paraphrase-b,dependency-down,sampled,3,rollback-deployment,False,Transient,2.63
+qwen2.5:3b-instruct,paraphrase-b,external-config-change,greedy,42,rollback-deployment,False,Configuration Issue,6.49
+qwen2.5:3b-instruct,paraphrase-b,external-config-change,sampled,1,noop,True,DeploymentMisconfiguration,3.269
+qwen2.5:3b-instruct,paraphrase-b,external-config-change,sampled,2,rollback-deployment,False,Configuration Issue,3.56
+qwen2.5:3b-instruct,paraphrase-b,external-config-change,sampled,3,rollback-deployment,False,Configuration Issue,3.138
+qwen2.5:3b-instruct,paraphrase-b,node-lost,greedy,42,rollback-deployment,False,Deployment Rollback,6.559
+qwen2.5:3b-instruct,paraphrase-b,node-lost,sampled,1,rollback-deployment,False,Deployment,3.479
+qwen2.5:3b-instruct,paraphrase-b,node-lost,sampled,2,rollback-deployment,False,Deployment Rollback,3.32
+qwen2.5:3b-instruct,paraphrase-b,node-lost,sampled,3,rollback-deployment,False,Deployment Rollback,2.863
+qwen2.5:3b-instruct,paraphrase-b,cert-expired,greedy,42,rollback-deployment,False,Transient,7.201
+qwen2.5:3b-instruct,paraphrase-b,cert-expired,sampled,1,rollback-deployment,False,Transient,2.828
+qwen2.5:3b-instruct,paraphrase-b,cert-expired,sampled,2,rollback-deployment,False,Deployment Rollout Issue,2.959
+qwen2.5:3b-instruct,paraphrase-b,cert-expired,sampled,3,rollback-deployment,False,Transient,2.855

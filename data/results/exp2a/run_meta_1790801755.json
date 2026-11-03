@@ -1,0 +1,40 @@
+{
+ "started_utc": "2026-09-30T20:55:55.435030+00:00",
+ "args": {
+  "trials": 5,
+  "scenarios": "all",
+  "conditions": "hybrid,llm-only,hybrid-tools,llm-tools",
+  "out_dir": "results/exp2a",
+  "seed": 20260930,
+  "max_wait": 300.0,
+  "stable": 10,
+  "poll": 0.5,
+  "testbed": "demo"
+ },
+ "python": "3.11.16",
+ "host": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+ "kubectl": "{\n  \"clientVersion\": {\n    \"major\": \"1\",\n    \"minor\": \"33\",\n    \"gitVersion\": \"v1.33.1\",\n    \"gitCommit\": \"8adc0f041b8e7ad1d30e29cc59c6ae7a15e19828\",\n    \"gitTreeState\": \"clean\",\n    \"buildDate\": \"2025-05-15T08:27:33Z\",\n    \"goVersion\": \"go1.24.2\",\n    \"compiler\": \"gc\",\n    \"platform\": \"linux/amd64\"\n  },\n  \"kustomizeVersion\": \"v5.6.0\",\n  \"serverVersion\": {\n    \"major\": \"1\",\n    \"minor\": \"33\",\n    \"emulationMajor\": \"1\",\n    \"emulationMinor\": \"33\",\n    \"minCompatibilityMajor\": \"1\",\n    \"minCompatibilityMinor\": \"32\",\n    \"gitVersion\": \"v1.33.1\",\n    \"gitCommit\": \"8adc0f041b8e7ad1d30e29cc59c6ae7a15e19828\",\n    \"gitTreeState\": \"clean\",\n    \"buildDate\": \"2025-05-15T08:19:08Z\",\n    \"goVersion\": \"go1.24.2\",\n    \"compiler\": \"gc\",\n    \"platform\": \"linux/amd64\"\n  }\n}\n",
+ "agent_image_id": "sha256:39137b89dd9bb94d67ad2c4eafbe45faf847a80ac270fdc8075d1ae881487cd3",
+ "agent_env": "[{\"name\":\"WATCH_NAMESPACE\",\"value\":\"agentic-demo\"},{\"name\":\"DIAGNOSIS_MODE\",\"value\":\"hybrid-tools\"},{\"name\":\"ALLOW_DESTRUCTIVE\",\"value\":\"false\"},{\"name\":\"AUTO_APPROVE_MODERATE\",\"value\":\"true\"},{\"name\":\"LLM_PROVIDER\",\"value\":\"ollama\"},{\"name\":\"LLM_URL\",\"value\":\"http://llm.agentic-demo.svc:11434\"},{\"name\":\"LLM_MODEL\",\"value\":\"qwen2.5:7b-instruct\"},{\"name\":\"LLM_NUM_THREAD\",\"value\":\"8\"},{\"name\":\"ANTHROPIC_API_KEY\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"anthropic-api-key\",\"name\":\"agent-secrets\",\"optional\":true}}}]",
+ "sha256": {
+  "agent/diagnosis.py": "6ae2e9a961d42efd116f04826c6027b4e9cdff73171fb66f5e6ac68772633b11",
+  "agent/llm.py": "2e190682abc0dd3910bda367f320f195bbecfe687a17fbb2699514afbae66f5e",
+  "agent/main.py": "347acd6d1fa71bea4b922404239d28a88b611f38cbf7cf549aa97df4abfb6bec",
+  "agent/remediation.py": "d0f7973e31276941ca98615dbaa0113c02df774c033b52f535b1ecdfd52bdb71",
+  "agent/safety.py": "a91854d52b56a1e8d2cc1f797e6afa7cb9521414ac7305df6e34db111d2bdf6d",
+  "agent/telemetry.py": "a8a4c9f64a146e2e2d92882ef93c355b1ee678b1120d67078efd4b9d4fe6ca48",
+  "agent/tools.py": "ea84669d46fdaa2f32fcd7542d149e73f16215e70a318262d04906663f054129",
+  "chaos/inject_faults.sh": "464c68cf29333affa2be852973e8e271a4b0c3f438023422fd614458bc7efb67",
+  "docker/Dockerfile": "ddb98bfb8af0456ab63a34d55633c0d9e1465775d67ca1f90b74443761210fb4",
+  "manifests/00-namespace.yaml": "3b986a88eb4a60c7bde072729d18efd36d590fb9e580b25dc36b611eed9acacf",
+  "manifests/01-rbac.yaml": "7465cf96141220b622d22d28dab2c1b2ecb8c67fd90d0d511c11074167032b8f",
+  "manifests/02-demo-app.yaml": "954bd2ac7191f7aa4bb97a3dd417dc6036fd02c3230b041ed1e28803e7f4c75f",
+  "manifests/02-demo-services.yaml": "2451da7ee9cbcf9db327e0e6b6573e597d0916493210942e9eaf4b0ff03de2cd",
+  "manifests/03-agent-deployment.yaml": "9c60f790e383829b4b86cbde88fb1142ab5e3f73d578576621fa8f8a3e94be3c",
+  "testbeds/boutique/boutique.yaml": "a0550517f6813815c36bee9d8f5ffe70a1dd79772289ef6363c0816f30556733",
+  "testbeds/boutique/faults.yaml": "6de1032b1172c13126b2fcf5036ba0ccf40f5ca7d648f50f6b8ab0628187ecd3",
+  "testbeds/boutique/inject.sh": "1ec94e977e7a0b8d3d55a25d1c146bca9730e423be32f4317a4a168f387cff8b",
+  "testbeds/boutique/setup.sh": "e633365e1415a76a2e799dffd183aaa56d16d5d2fcedc80c58179525d5c93964",
+  "testbeds/boutique/upstream-kubernetes-manifests.yaml": "ae3c20181c051048e6a5cae51fa530681affa4043ba60ae95d4f39e1262f2744"
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "started_utc": "2026-09-29T13:56:47.826080+00:00",
+ "args": {
+  "trials": 1,
+  "scenarios": "all",
+  "conditions": "baseline,restart,rules,hybrid,llm-only",
+  "out_dir": "results/pilot",
+  "seed": 2,
+  "max_wait": 180,
+  "stable": 10,
+  "poll": 0.5
+ },
+ "python": "3.11.16",
+ "host": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+ "kubectl": "{\n  \"clientVersion\": {\n    \"major\": \"1\",\n    \"minor\": \"33\",\n    \"gitVersion\": \"v1.33.1\",\n    \"gitCommit\": \"8adc0f041b8e7ad1d30e29cc59c6ae7a15e19828\",\n    \"gitTreeState\": \"clean\",\n    \"buildDate\": \"2025-05-15T08:27:33Z\",\n    \"goVersion\": \"go1.24.2\",\n    \"compiler\": \"gc\",\n    \"platform\": \"linux/amd64\"\n  },\n  \"kustomizeVersion\": \"v5.6.0\",\n  \"serverVersion\": {\n    \"major\": \"1\",\n    \"minor\": \"33\",\n    \"emulationMajor\": \"1\",\n    \"emulationMinor\": \"33\",\n    \"minCompatibilityMajor\": \"1\",\n    \"minCompatibilityMinor\": \"32\",\n    \"gitVersion\": \"v1.33.1\",\n    \"gitCommit\": \"8adc0f041b8e7ad1d30e29cc59c6ae7a15e19828\",\n    \"gitTreeState\": \"clean\",\n    \"buildDate\": \"2025-05-15T08:19:08Z\",\n    \"goVersion\": \"go1.24.2\",\n    \"compiler\": \"gc\",\n    \"platform\": \"linux/amd64\"\n  }\n}\n"
+}

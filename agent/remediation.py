@@ -1,5 +1,4 @@
 """
-Developed and Edited by Abhijeet Bajpayee
 remediation.py — executes approved actions against the Kubernetes API.
 
 Every action is generic (no knowledge of how the benchmark injects faults)

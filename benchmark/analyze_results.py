@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Developed and Edited By Abhijeet bajpayee
 analyze_results.py — statistics, tables and figures for the paper.
 
     python benchmark/analyze_results.py results/main --fig-dir paper/figures --tab-dir paper/tables

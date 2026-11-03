@@ -1,0 +1,18 @@
+[1/7] b01-pod-kill-baseline
+    -> recovered=True ttr=39.71 first_action= valid=True 
+[2/7] b01-crash-release-baseline
+    -> recovered=False ttr=180 first_action= valid=True 
+[3/7] b01-bad-image-baseline
+    -> recovered=False ttr=180 first_action= valid=True 
+[4/7] b01-selector-break-baseline
+    -> recovered=False ttr=180 first_action= valid=True fault never visible
+[5/7] b01-memory-release-baseline
+    -> recovered=False ttr=180 first_action= valid=True 
+[6/7] b01-unschedulable-baseline
+    -> recovered=False ttr=180 first_action= valid=True 
+[7/7] b01-missing-secret-baseline
+    -> recovered=False ttr=180 first_action= valid=True 
+done: results/boutique_validation/trials.csv
+[1/1] b01-zero-replicas-baseline
+    -> recovered=False ttr=180 first_action= valid=True 
+done: results/boutique_validation/trials.csv

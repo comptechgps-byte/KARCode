@@ -1,0 +1,168 @@
+ok   nodes Ready
+ok   no stale pod IPs
+ok   DNS from agentic-remediator-control-plane
+ok   DNS from agentic-remediator-worker
+ok   DNS from agentic-remediator-worker2
+ok   NetworkPolicy enforced in 3/3 tests
+[1/12] b01-probe-misconfig-hybrid-fe
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[2/12] b01-probe-misconfig-hybrid-fe-14b
+    -> recovered=True ttr=103.86 first_action=revert-network-policy valid=True 
+[3/12] b01-probe-misconfig-hybrid-fe-llama8b
+    -> recovered=True ttr=64.23 first_action=revert-network-policy valid=True 
+[4/12] b02-probe-misconfig-hybrid-fe-llama8b
+    -> recovered=True ttr=51.18 first_action=revert-network-policy valid=True 
+[5/12] b02-probe-misconfig-hybrid-fe-14b
+    -> recovered=True ttr=101.81 first_action=revert-network-policy valid=True 
+[6/12] b02-probe-misconfig-hybrid-fe
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[7/12] b03-probe-misconfig-hybrid-fe-llama8b
+    -> recovered=True ttr=64.16 first_action=revert-network-policy valid=True 
+[8/12] b03-probe-misconfig-hybrid-fe
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[9/12] b03-probe-misconfig-hybrid-fe-14b
+    -> recovered=True ttr=113.51 first_action=revert-network-policy valid=True 
+[10/12] b04-probe-misconfig-hybrid-fe-llama8b
+    -> recovered=True ttr=68.06 first_action=revert-network-policy valid=True 
+[11/12] b04-probe-misconfig-hybrid-fe
+    -> recovered=False ttr=300.0 first_action=revert-network-policy valid=True 
+[12/12] b04-probe-misconfig-hybrid-fe-14b
+    -> recovered=True ttr=113.39 first_action=revert-network-policy valid=True 
+done: results/exp10a/trials.csv
+no suspended trials
+results/exp10a/trials.csv: 0 injection failures
+done: results/exp10a/trials.csv
+[1/12] b01-memory-release-hybrid-fe
+    -> recovered=True ttr=30.34 first_action=patch-limits valid=True 
+[2/12] b01-pod-kill-hybrid-fe
+    -> recovered=True ttr=13.14 first_action= valid=True 
+[3/12] b01-crash-release-hybrid-fe
+    -> recovered=True ttr=26.45 first_action=rollback-deployment valid=True 
+[4/12] b02-crash-release-hybrid-fe
+    -> recovered=True ttr=25.26 first_action=rollback-deployment valid=True 
+[5/12] b02-pod-kill-hybrid-fe
+    -> recovered=True ttr=13.11 first_action= valid=True 
+[6/12] b02-memory-release-hybrid-fe
+    -> recovered=True ttr=80.52 first_action=patch-limits valid=True 
+[7/12] b03-memory-release-hybrid-fe
+    -> recovered=True ttr=27.35 first_action=patch-limits valid=True 
+[8/12] b03-pod-kill-hybrid-fe
+    -> recovered=True ttr=13.11 first_action= valid=True 
+[9/12] b03-crash-release-hybrid-fe
+    -> recovered=True ttr=27.5 first_action=rollback-deployment valid=True 
+[10/12] b04-memory-release-hybrid-fe
+    -> recovered=True ttr=28.53 first_action=patch-limits valid=True 
+[11/12] b04-pod-kill-hybrid-fe
+    -> recovered=True ttr=13.1 first_action= valid=True 
+[12/12] b04-crash-release-hybrid-fe
+    -> recovered=True ttr=27.35 first_action=rollback-deployment valid=True 
+done: results/exp10c/trials.csv
+no suspended trials
+results/exp10c/trials.csv: 0 injection failures
+done: results/exp10c/trials.csv
+BOUTIQUE DONE
+[1/25] b01-pod-kill-hybrid-fe
+    -> recovered=True ttr=1.08 first_action= valid=True 
+[2/25] b01-oom-kill-hybrid-fe
+    -> recovered=True ttr=8.18 first_action=patch-limits valid=True 
+[3/25] b01-net-partition-hybrid-fe
+    -> recovered=False ttr=300.0 first_action= valid=False injection failure: fault not visible within 60 s (visible at None)
+[4/25] b01-crashloop-hybrid-fe
+    -> recovered=True ttr=22.22 first_action=rollback-deployment valid=True 
+[5/25] b01-transient-crash-hybrid-fe
+    -> recovered=True ttr=2.16 first_action= valid=True 
+[6/25] b02-oom-kill-hybrid-fe
+    -> recovered=True ttr=8.16 first_action=patch-limits valid=True 
+[7/25] b02-crashloop-hybrid-fe
+    -> recovered=True ttr=24.82 first_action=rollback-deployment valid=True 
+[8/25] b02-transient-crash-hybrid-fe
+    -> recovered=True ttr=2.62 first_action= valid=True 
+[9/25] b02-net-partition-hybrid-fe
+    -> recovered=False ttr=300.0 first_action= valid=False injection failure: fault not visible within 60 s (visible at None)
+[10/25] b02-pod-kill-hybrid-fe
+    -> recovered=True ttr=1.06 first_action= valid=True 
+[11/25] b03-pod-kill-hybrid-fe
+    -> recovered=True ttr=1.06 first_action= valid=True 
+[12/25] b03-crashloop-hybrid-fe
+    -> recovered=True ttr=24.27 first_action=rollback-deployment valid=True 
+[13/25] b03-oom-kill-hybrid-fe
+    -> recovered=True ttr=10.17 first_action=patch-limits valid=True 
+[14/25] b03-transient-crash-hybrid-fe
+    -> recovered=True ttr=3.1 first_action= valid=True 
+[15/25] b03-net-partition-hybrid-fe
+    -> recovered=False ttr=300.0 first_action= valid=False injection failure: fault not visible within 60 s (visible at None)
+[16/25] b04-oom-kill-hybrid-fe
+    -> recovered=True ttr=10.16 first_action=patch-limits valid=True 
+[17/25] b04-transient-crash-hybrid-fe
+    -> recovered=True ttr=3.12 first_action= valid=True 
+[18/25] b04-crashloop-hybrid-fe
+    -> recovered=True ttr=24.35 first_action=rollback-deployment valid=True 
+[19/25] b04-pod-kill-hybrid-fe
+    -> recovered=True ttr=1.09 first_action= valid=True 
+[20/25] b04-net-partition-hybrid-fe
+    -> recovered=False ttr=300.0 first_action= valid=False injection failure: fault not visible within 60 s (visible at None)
+[21/25] b05-pod-kill-hybrid-fe
+    -> recovered=True ttr=1.07 first_action= valid=True 
+[22/25] b05-transient-crash-hybrid-fe
+    -> recovered=True ttr=3.1 first_action= valid=True 
+[23/25] b05-net-partition-hybrid-fe
+    -> recovered=False ttr=300.0 first_action= valid=False injection failure: fault not visible within 60 s (visible at None)
+[24/25] b05-oom-kill-hybrid-fe
+    -> recovered=True ttr=8.16 first_action=patch-limits valid=True 
+[25/25] b05-crashloop-hybrid-fe
+    -> recovered=True ttr=22.23 first_action=rollback-deployment valid=True 
+done: results/exp10b/trials.csv
+no suspended trials
+results/exp10b/trials.csv: 0 injection failures
+[3/25] b01-net-partition-hybrid-fe
+Terminated
+ALL V6 LIVE DONE
+original      dependency-down greedy  42 -> restart-pod
+original      dependency-down sampled 1 -> rollback-deployment
+original      dependency-down sampled 2 -> rollback-deployment
+original      dependency-down sampled 3 -> rollback-deployment
+original      external-config-change greedy  42 -> rollback-deployment
+original      external-config-change sampled 1 -> rollback-deployment
+original      external-config-change sampled 2 -> rollback-deployment
+original      external-config-change sampled 3 -> rollback-deployment
+original      node-lost       greedy  42 -> rollback-deployment
+original      node-lost       sampled 1 -> scale-deployment
+original      node-lost       sampled 2 -> scale-deployment
+original      node-lost       sampled 3 -> rollback-deployment
+original      cert-expired    greedy  42 -> rollback-deployment
+original      cert-expired    sampled 1 -> rollback-deployment
+original      cert-expired    sampled 2 -> rollback-deployment
+original      cert-expired    sampled 3 -> rollback-deployment
+paraphrase-a  dependency-down greedy  42 -> rollback-deployment
+paraphrase-a  dependency-down sampled 1 -> rollback-deployment
+paraphrase-a  dependency-down sampled 2 -> rollback-deployment
+paraphrase-a  dependency-down sampled 3 -> rollback-deployment
+paraphrase-a  external-config-change greedy  42 -> rollback-deployment
+paraphrase-a  external-config-change sampled 1 -> rollback-deployment
+paraphrase-a  external-config-change sampled 2 -> rollback-deployment
+paraphrase-a  external-config-change sampled 3 -> rollback-deployment
+paraphrase-a  node-lost       greedy  42 -> rollback-deployment
+paraphrase-a  node-lost       sampled 1 -> rollback-deployment
+paraphrase-a  node-lost       sampled 2 -> revert-network-policy
+paraphrase-a  node-lost       sampled 3 -> rollback-deployment
+paraphrase-a  cert-expired    greedy  42 -> rollback-deployment
+paraphrase-a  cert-expired    sampled 1 -> rollback-deployment
+paraphrase-a  cert-expired    sampled 2 -> rollback-deployment
+paraphrase-a  cert-expired    sampled 3 -> rollback-deployment
+paraphrase-b  dependency-down greedy  42 -> restart-pod
+paraphrase-b  dependency-down sampled 1 -> rollback-deployment
+paraphrase-b  dependency-down sampled 2 -> rollback-deployment
+paraphrase-b  dependency-down sampled 3 -> rollback-deployment
+paraphrase-b  external-config-change greedy  42 -> rollback-deployment
+paraphrase-b  external-config-change sampled 1 -> noop
+paraphrase-b  external-config-change sampled 2 -> rollback-deployment
+paraphrase-b  external-config-change sampled 3 -> rollback-deployment
+paraphrase-b  node-lost       greedy  42 -> rollback-deployment
+paraphrase-b  node-lost       sampled 1 -> rollback-deployment
+paraphrase-b  node-lost       sampled 2 -> rollback-deployment
+paraphrase-b  node-lost       sampled 3 -> rollback-deployment
+paraphrase-b  cert-expired    greedy  42 -> rollback-deployment
+paraphrase-b  cert-expired    sampled 1 -> rollback-deployment
+paraphrase-b  cert-expired    sampled 2 -> rollback-deployment
+paraphrase-b  cert-expired    sampled 3 -> rollback-deployment
+wrote results/prompt_traps2/qwen2.5_3b-instruct.csv

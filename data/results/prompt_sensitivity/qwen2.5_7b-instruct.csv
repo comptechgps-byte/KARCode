@@ -1,0 +1,61 @@
+model,prompt,fault,decoding,seed,action,correct,fault_class,latency_s
+qwen2.5:7b-instruct,original,oom-kill,greedy,42,patch-limits,True,Out of Memory,11.301
+qwen2.5:7b-instruct,original,oom-kill,sampled,1,patch-limits,True,Out Of Memory,5.737
+qwen2.5:7b-instruct,original,oom-kill,sampled,2,patch-limits,True,Out of Memory,5.944
+qwen2.5:7b-instruct,original,oom-kill,sampled,3,patch-limits,True,Out of Memory,5.938
+qwen2.5:7b-instruct,original,crashloop,greedy,42,rollback-deployment,True,Deployment issue,13.923
+qwen2.5:7b-instruct,original,crashloop,sampled,1,rollback-deployment,True,Deployment issue,5.933
+qwen2.5:7b-instruct,original,crashloop,sampled,2,rollback-deployment,True,CrashLoopBackOff due to unhandled exception,7.589
+qwen2.5:7b-instruct,original,crashloop,sampled,3,rollback-deployment,True,bad release,6.48
+qwen2.5:7b-instruct,original,net-partition,greedy,42,revert-network-policy,True,readiness-probe-failure,13.176
+qwen2.5:7b-instruct,original,net-partition,sampled,1,revert-network-policy,True,readiness-probe-failure,6.169
+qwen2.5:7b-instruct,original,net-partition,sampled,2,revert-network-policy,True,readiness-probe-failure,6.26
+qwen2.5:7b-instruct,original,net-partition,sampled,3,revert-network-policy,True,readiness-probe-failure,6.148
+qwen2.5:7b-instruct,original,bad-image,greedy,42,rollback-deployment,True,ImagePullBackOff,13.954
+qwen2.5:7b-instruct,original,bad-image,sampled,1,rollback-deployment,True,ImagePullBackOff,5.908
+qwen2.5:7b-instruct,original,bad-image,sampled,2,rollback-deployment,True,ImagePullBackOff,6.817
+qwen2.5:7b-instruct,original,bad-image,sampled,3,rollback-deployment,True,ImagePullBackOff,6.382
+qwen2.5:7b-instruct,original,missing-config,greedy,42,noop,False,Missing ConfigMap,13.782
+qwen2.5:7b-instruct,original,missing-config,sampled,1,patch-limits,False,MissingConfigMap,6.09
+qwen2.5:7b-instruct,original,missing-config,sampled,2,rollback-deployment,True,missing-config,6.872
+qwen2.5:7b-instruct,original,missing-config,sampled,3,noop,False,Missing ConfigMap,6.504
+qwen2.5:7b-instruct,paraphrase-a,oom-kill,greedy,42,patch-limits,True,Out of Memory,23.871
+qwen2.5:7b-instruct,paraphrase-a,oom-kill,sampled,1,patch-limits,True,Out Of Memory,5.95
+qwen2.5:7b-instruct,paraphrase-a,oom-kill,sampled,2,patch-limits,True,Out of Memory,6.087
+qwen2.5:7b-instruct,paraphrase-a,oom-kill,sampled,3,patch-limits,True,Out of Memory,5.854
+qwen2.5:7b-instruct,paraphrase-a,crashloop,greedy,42,rollback-deployment,True,CrashLoopBackOff,13.872
+qwen2.5:7b-instruct,paraphrase-a,crashloop,sampled,1,rollback-deployment,True,Application error,6.729
+qwen2.5:7b-instruct,paraphrase-a,crashloop,sampled,2,restart-pod,False,Transient container issue,7.642
+qwen2.5:7b-instruct,paraphrase-a,crashloop,sampled,3,restart-pod,False,CrashLoopBackOff,7.721
+qwen2.5:7b-instruct,paraphrase-a,net-partition,greedy,42,restart-pod,False,readiness-probe-failure,14.69
+qwen2.5:7b-instruct,paraphrase-a,net-partition,sampled,1,restart-pod,False,readiness-failing,7.615
+qwen2.5:7b-instruct,paraphrase-a,net-partition,sampled,2,rollback-deployment,False,readiness-probe-failure,6.629
+qwen2.5:7b-instruct,paraphrase-a,net-partition,sampled,3,restart-pod,False,readiness-probe-failure,7.42
+qwen2.5:7b-instruct,paraphrase-a,bad-image,greedy,42,rollback-deployment,True,ImagePullBackOff,13.853
+qwen2.5:7b-instruct,paraphrase-a,bad-image,sampled,1,rollback-deployment,True,ImagePullBackOff,7.066
+qwen2.5:7b-instruct,paraphrase-a,bad-image,sampled,2,rollback-deployment,True,ImagePullBackOff,6.428
+qwen2.5:7b-instruct,paraphrase-a,bad-image,sampled,3,rollback-deployment,True,ImagePullBackOff,7.437
+qwen2.5:7b-instruct,paraphrase-a,missing-config,greedy,42,rollback-deployment,True,Configuration issue,13.523
+qwen2.5:7b-instruct,paraphrase-a,missing-config,sampled,1,rollback-deployment,True,ConfigurationError,6.195
+qwen2.5:7b-instruct,paraphrase-a,missing-config,sampled,2,noop,False,MissingConfig,8.374
+qwen2.5:7b-instruct,paraphrase-a,missing-config,sampled,3,rollback-deployment,True,Configuration issue,6.446
+qwen2.5:7b-instruct,paraphrase-b,oom-kill,greedy,42,patch-limits,True,OOMKilled,24.931
+qwen2.5:7b-instruct,paraphrase-b,oom-kill,sampled,1,patch-limits,True,OOMKilled,7.602
+qwen2.5:7b-instruct,paraphrase-b,oom-kill,sampled,2,patch-limits,True,OOMKilled,6.737
+qwen2.5:7b-instruct,paraphrase-b,oom-kill,sampled,3,patch-limits,True,OOMKilled,6.983
+qwen2.5:7b-instruct,paraphrase-b,crashloop,greedy,42,restart-pod,False,CrashLoopBackOff,15.489
+qwen2.5:7b-instruct,paraphrase-b,crashloop,sampled,1,restart-pod,False,CrashLoopBackOff,7.642
+qwen2.5:7b-instruct,paraphrase-b,crashloop,sampled,2,rollback-deployment,True,CrashLoopBackOff,6.985
+qwen2.5:7b-instruct,paraphrase-b,crashloop,sampled,3,restart-pod,False,CrashLoopBackOff,7.96
+qwen2.5:7b-instruct,paraphrase-b,net-partition,greedy,42,scale-deployment,False,readiness-probe-failure,13.018
+qwen2.5:7b-instruct,paraphrase-b,net-partition,sampled,1,restart-pod,False,readiness-probe-failure,9.407
+qwen2.5:7b-instruct,paraphrase-b,net-partition,sampled,2,scale-deployment,False,readiness-probe-failure,7.093
+qwen2.5:7b-instruct,paraphrase-b,net-partition,sampled,3,restart-pod,False,readiness-failing,7.457
+qwen2.5:7b-instruct,paraphrase-b,bad-image,greedy,42,rollback-deployment,True,bad_image,14.766
+qwen2.5:7b-instruct,paraphrase-b,bad-image,sampled,1,rollback-deployment,True,bad_image,5.948
+qwen2.5:7b-instruct,paraphrase-b,bad-image,sampled,2,rollback-deployment,True,bad_image,7.364
+qwen2.5:7b-instruct,paraphrase-b,bad-image,sampled,3,rollback-deployment,True,bad_image,8.252
+qwen2.5:7b-instruct,paraphrase-b,missing-config,greedy,42,rollback-deployment,True,missing-config,14.05
+qwen2.5:7b-instruct,paraphrase-b,missing-config,sampled,1,patch-limits,False,missing_config,6.509
+qwen2.5:7b-instruct,paraphrase-b,missing-config,sampled,2,rollback-deployment,True,missing-config,7.64
+qwen2.5:7b-instruct,paraphrase-b,missing-config,sampled,3,rollback-deployment,True,missing_config,7.828

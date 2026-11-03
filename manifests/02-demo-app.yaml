@@ -4,7 +4,8 @@
 # an identical state with revision history = 1. Services live in
 # 02-demo-services.yaml and are never touched by the reset.
 #
-# Design notes (each fixes a validity problem found in the v1 testbed):
+# Design notes (each fixes a validity problem found in the v1 testbed, see
+# docs/audit-v1.md):
 #   * strategy: Recreate on every Deployment. With the default RollingUpdate
 #     and replicas=1, a bad release leaves the old healthy pod serving, so
 #     the "fault" never produced an outage and health was measured on

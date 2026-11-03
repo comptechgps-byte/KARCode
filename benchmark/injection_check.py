@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """
-Developed By Abhijeet Bajpayee
 injection_check.py — apply the pre-specified injection-failure rule to an
 existing run: a trial whose fault did not become visible to the independent
 health check within 60 s is an injection failure, not an outcome of the

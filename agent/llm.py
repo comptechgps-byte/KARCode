@@ -1,5 +1,4 @@
 """
-Developed and Edited by Abhijeet Bajpayee
 llm.py — provider-neutral LLM client used by the diagnosis escalation path.
 
 Providers (LLM_PROVIDER):

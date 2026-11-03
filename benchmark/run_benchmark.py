@@ -2,7 +2,7 @@
 """
 run_benchmark.py — MTTR / recovery benchmark harness.
 
-Design (Create Section "Benchmark protocol"):
+Design (see paper, Section "Benchmark protocol"):
   * Conditions: baseline (no agent: native Kubernetes only), restart (naive
     auto-restart operator), rules, hybrid, llm-only.
   * Scenarios: chaos/chaos_scenarios.yaml (8 faults, 4 categories).

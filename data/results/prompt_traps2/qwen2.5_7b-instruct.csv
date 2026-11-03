@@ -1,0 +1,49 @@
+model,prompt,fault,decoding,seed,action,correct,fault_class,latency_s
+qwen2.5:7b-instruct,original,dependency-down,greedy,42,noop,True,upstream-backend-unavailable,33.347
+qwen2.5:7b-instruct,original,dependency-down,sampled,1,revert-network-policy,False,upstream-unreachable,7.45
+qwen2.5:7b-instruct,original,dependency-down,sampled,2,revert-network-policy,False,upstream-backend-unreachable,6.43
+qwen2.5:7b-instruct,original,dependency-down,sampled,3,rollback-deployment,False,upstream-backend-unavailable,6.889
+qwen2.5:7b-instruct,original,external-config-change,greedy,42,rollback-deployment,False,Bad configuration in ConfigMap,16.293
+qwen2.5:7b-instruct,original,external-config-change,sampled,1,rollback-deployment,False,bad config,6.288
+qwen2.5:7b-instruct,original,external-config-change,sampled,2,rollback-deployment,False,Misconfiguration,6.126
+qwen2.5:7b-instruct,original,external-config-change,sampled,3,patch-limits,False,Bad configuration,6.383
+qwen2.5:7b-instruct,original,node-lost,greedy,42,scale-deployment,False,NodeNotReady,13.508
+qwen2.5:7b-instruct,original,node-lost,sampled,1,cordon-node,False,NodeNotReady,6.686
+qwen2.5:7b-instruct,original,node-lost,sampled,2,cordon-node,False,NodeNotReady,7.663
+qwen2.5:7b-instruct,original,node-lost,sampled,3,cordon-node,False,NodeNotReady,6.838
+qwen2.5:7b-instruct,original,cert-expired,greedy,42,noop,True,certificate expiration,16.761
+qwen2.5:7b-instruct,original,cert-expired,sampled,1,noop,True,invalid-certificate,8.253
+qwen2.5:7b-instruct,original,cert-expired,sampled,2,noop,True,TLS certificate expired,7.448
+qwen2.5:7b-instruct,original,cert-expired,sampled,3,noop,True,certificate_expiration,7.478
+qwen2.5:7b-instruct,paraphrase-a,dependency-down,greedy,42,revert-network-policy,False,upstream_unavailable,26.133
+qwen2.5:7b-instruct,paraphrase-a,dependency-down,sampled,1,revert-network-policy,False,service_unreachable,5.84
+qwen2.5:7b-instruct,paraphrase-a,dependency-down,sampled,2,scale-deployment,False,service_unreachable,6.897
+qwen2.5:7b-instruct,paraphrase-a,dependency-down,sampled,3,rollback-deployment,False,upstream-backend-unavailable,6.419
+qwen2.5:7b-instruct,paraphrase-a,external-config-change,greedy,42,rollback-deployment,False,Bad image or config,15.046
+qwen2.5:7b-instruct,paraphrase-a,external-config-change,sampled,1,rollback-deployment,False,bad_image_or_config,6.287
+qwen2.5:7b-instruct,paraphrase-a,external-config-change,sampled,2,rollback-deployment,False,Bad release,6.631
+qwen2.5:7b-instruct,paraphrase-a,external-config-change,sampled,3,rollback-deployment,False,Bad image or config,6.977
+qwen2.5:7b-instruct,paraphrase-a,node-lost,greedy,42,cordon-node,False,NodeNotReady,14.086
+qwen2.5:7b-instruct,paraphrase-a,node-lost,sampled,1,cordon-node,False,NodeNotReady,6.348
+qwen2.5:7b-instruct,paraphrase-a,node-lost,sampled,2,cordon-node,False,NodeNotReady,7.695
+qwen2.5:7b-instruct,paraphrase-a,node-lost,sampled,3,cordon-node,False,NodeNotReady,7.881
+qwen2.5:7b-instruct,paraphrase-a,cert-expired,greedy,42,rollback-deployment,False,Configuration error,15.331
+qwen2.5:7b-instruct,paraphrase-a,cert-expired,sampled,1,rollback-deployment,False,invalid-certificate,6.047
+qwen2.5:7b-instruct,paraphrase-a,cert-expired,sampled,2,rollback-deployment,False,Configuration issue,5.61
+qwen2.5:7b-instruct,paraphrase-a,cert-expired,sampled,3,rollback-deployment,False,Configuration error,6.124
+qwen2.5:7b-instruct,paraphrase-b,dependency-down,greedy,42,restart-pod,False,upstream-backend-unavailable,27.613
+qwen2.5:7b-instruct,paraphrase-b,dependency-down,sampled,1,restart-pod,False,upstream-backend-unavailable,9.189
+qwen2.5:7b-instruct,paraphrase-b,dependency-down,sampled,2,rollback-deployment,False,upstream-backend-unavailable,8.098
+qwen2.5:7b-instruct,paraphrase-b,dependency-down,sampled,3,rollback-deployment,False,upstream-backend-unavailable,7.956
+qwen2.5:7b-instruct,paraphrase-b,external-config-change,greedy,42,rollback-deployment,False,bad_image_or_config,15.721
+qwen2.5:7b-instruct,paraphrase-b,external-config-change,sampled,1,restart-pod,False,invalid_config,8.823
+qwen2.5:7b-instruct,paraphrase-b,external-config-change,sampled,2,rollback-deployment,False,bad_env/config,7.681
+qwen2.5:7b-instruct,paraphrase-b,external-config-change,sampled,3,rollback-deployment,False,bad_image_or_config,8.279
+qwen2.5:7b-instruct,paraphrase-b,node-lost,greedy,42,scale-deployment,False,NodeNotReady,14.294
+qwen2.5:7b-instruct,paraphrase-b,node-lost,sampled,1,scale-deployment,False,NodeNotReady,7.668
+qwen2.5:7b-instruct,paraphrase-b,node-lost,sampled,2,scale-deployment,False,NodeNotReady,6.873
+qwen2.5:7b-instruct,paraphrase-b,node-lost,sampled,3,scale-deployment,False,NodeNotReady,6.394
+qwen2.5:7b-instruct,paraphrase-b,cert-expired,greedy,42,restart-pod,False,expired-certificate,17.253
+qwen2.5:7b-instruct,paraphrase-b,cert-expired,sampled,1,rollback-deployment,False,certificate-expiration,7.935
+qwen2.5:7b-instruct,paraphrase-b,cert-expired,sampled,2,rollback-deployment,False,expired-certificate,8.14
+qwen2.5:7b-instruct,paraphrase-b,cert-expired,sampled,3,restart-pod,False,expired-certificate,8.142

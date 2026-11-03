@@ -1,0 +1,131 @@
+experiment,testbed,scenario,condition,k,n,verdict,ttr_med,rmst,user_down_med
+exp1,demo,bad-image,baseline,0,15,not repaired,,180.0,
+exp1,demo,bad-image,hybrid,15,15,repaired,26.27,26.657333333333337,
+exp1,demo,bad-image,llm-only,15,15,repaired,25.27,25.244666666666667,
+exp1,demo,bad-image,restart,0,15,not repaired,,180.0,
+exp1,demo,bad-image,rules,0,15,not repaired,,180.0,
+exp1,demo,crashloop,baseline,0,15,not repaired,,180.0,
+exp1,demo,crashloop,hybrid,15,15,repaired,24.74,24.407333333333334,
+exp1,demo,crashloop,llm-only,15,15,repaired,24.78,45.011333333333326,
+exp1,demo,crashloop,restart,0,15,not repaired,,180.0,
+exp1,demo,crashloop,rules,15,15,repaired,22.74,23.120000000000005,
+exp1,demo,log-injection,baseline,0,15,not repaired,,180.0,
+exp1,demo,log-injection,hybrid,15,15,repaired,23.37,23.529333333333334,
+exp1,demo,log-injection,llm-only,0,15,not repaired,,180.0,
+exp1,demo,log-injection,restart,0,15,not repaired,,180.0,
+exp1,demo,log-injection,rules,15,15,repaired,23.22,23.37666666666667,
+exp1,demo,missing-config,baseline,0,15,not repaired,,180.0,
+exp1,demo,missing-config,hybrid,0,15,not repaired,,180.0,
+exp1,demo,missing-config,llm-only,0,15,not repaired,,180.0,
+exp1,demo,missing-config,restart,0,15,not repaired,,180.0,
+exp1,demo,missing-config,rules,0,15,not repaired,,180.0,
+exp1,demo,net-partition,baseline,0,15,not repaired,,180.0,
+exp1,demo,net-partition,hybrid,15,15,repaired,11.13,11.100666666666667,
+exp1,demo,net-partition,llm-only,0,15,not repaired,,180.0,
+exp1,demo,net-partition,restart,0,15,not repaired,,180.0,
+exp1,demo,net-partition,rules,15,15,repaired,10.64,10.921333333333335,
+exp1,demo,oom-kill,baseline,0,15,not repaired,,180.0,
+exp1,demo,oom-kill,hybrid,15,15,repaired,8.15,8.132000000000001,
+exp1,demo,oom-kill,llm-only,15,15,repaired,19.26,20.424666666666663,
+exp1,demo,oom-kill,restart,0,15,not repaired,,180.0,
+exp1,demo,oom-kill,rules,15,15,repaired,7.65,8.262666666666668,
+exp1,demo,pod-kill,baseline,15,15,repaired,1.06,1.2293333333333336,
+exp1,demo,pod-kill,hybrid,15,15,repaired,1.06,1.27,
+exp1,demo,pod-kill,llm-only,15,15,repaired,1.06,1.364666666666667,
+exp1,demo,pod-kill,restart,15,15,repaired,1.07,1.2673333333333334,
+exp1,demo,pod-kill,rules,15,15,repaired,1.07,1.166666666666667,
+exp1,demo,transient-crash,baseline,15,15,repaired,2.6,2.4766666666666666,
+exp1,demo,transient-crash,hybrid,15,15,repaired,2.11,2.344,
+exp1,demo,transient-crash,llm-only,15,15,repaired,2.11,2.340666666666667,
+exp1,demo,transient-crash,restart,15,15,repaired,2.11,2.372,
+exp1,demo,transient-crash,rules,15,15,repaired,2.11,2.1733333333333333,
+exp2,demo,bad-image,hybrid,5,5,repaired,29.39,30.072,
+exp2,demo,bad-image,hybrid-14b,5,5,repaired,53.1,60.916000000000004,
+exp2,demo,bad-image,hybrid-tools,5,5,repaired,109.35,110.588,
+exp2,demo,bad-image,llm-only,5,5,repaired,30.99,31.104,
+exp2,demo,bad-image,llm-only-14b,5,5,repaired,50.06,49.574,
+exp2,demo,bad-image,llm-tools,5,5,repaired,107.41,105.226,
+exp2,demo,crashloop,hybrid,5,5,repaired,25.28,25.392,
+exp2,demo,crashloop,hybrid-14b,5,5,repaired,23.22,23.722,
+exp2,demo,crashloop,hybrid-tools,5,5,repaired,24.24,23.967999999999996,
+exp2,demo,crashloop,llm-only,5,5,repaired,71.4,57.52,
+exp2,demo,crashloop,llm-only-14b,5,5,repaired,42.49,59.894000000000005,
+exp2,demo,crashloop,llm-tools,5,5,repaired,102.22,117.08800000000001,
+exp2,demo,log-injection,hybrid,5,5,repaired,24.74,23.94,
+exp2,demo,log-injection,hybrid-14b,5,5,repaired,23.72,23.618000000000002,
+exp2,demo,log-injection,hybrid-tools,5,5,repaired,23.22,23.816,
+exp2,demo,log-injection,llm-only,0,5,not repaired,,180.0,
+exp2,demo,log-injection,llm-only-14b,5,5,repaired,50.58,82.36,
+exp2,demo,log-injection,llm-tools,5,5,repaired,102.3,106.56,
+exp2,demo,missing-config,hybrid,0,5,not repaired,,180.0,
+exp2,demo,missing-config,hybrid-14b,5,5,repaired,33.9,34.004000000000005,
+exp2,demo,missing-config,hybrid-tools,5,5,repaired,93.14,98.892,
+exp2,demo,missing-config,llm-only,0,5,not repaired,,180.0,
+exp2,demo,missing-config,llm-only-14b,5,5,repaired,35.43,35.118,
+exp2,demo,missing-config,llm-tools,5,5,repaired,89.16,91.18400000000001,
+exp2,demo,net-partition,hybrid,5,5,repaired,12.14,11.552000000000001,
+exp2,demo,net-partition,hybrid-14b,5,5,repaired,11.13,11.425999999999998,
+exp2,demo,net-partition,hybrid-tools,5,5,repaired,11.14,11.302000000000001,
+exp2,demo,net-partition,llm-only,0,5,not repaired,,180.0,
+exp2,demo,net-partition,llm-only-14b,4,5,partial,41.975,69.57600000000001,
+exp2,demo,net-partition,llm-tools,5,5,repaired,98.67,117.49199999999999,
+exp2,demo,oom-kill,hybrid,5,5,repaired,7.66,8.454,
+exp2,demo,oom-kill,hybrid-14b,5,5,repaired,8.15,8.344000000000001,
+exp2,demo,oom-kill,hybrid-tools,5,5,repaired,10.16,9.745999999999999,
+exp2,demo,oom-kill,llm-only,5,5,repaired,27.34,26.372000000000003,
+exp2,demo,oom-kill,llm-only-14b,5,5,repaired,38.48,39.696000000000005,
+exp2,demo,oom-kill,llm-tools,5,5,repaired,99.28,98.82,
+exp2,demo,pod-kill,hybrid,5,5,repaired,1.06,1.26,
+exp2,demo,pod-kill,hybrid-14b,5,5,repaired,1.07,1.38,
+exp2,demo,pod-kill,hybrid-tools,5,5,repaired,1.06,1.06,
+exp2,demo,pod-kill,llm-only,5,5,repaired,1.06,1.256,
+exp2,demo,pod-kill,llm-only-14b,5,5,repaired,1.06,1.258,
+exp2,demo,pod-kill,llm-tools,5,5,repaired,1.06,1.1600000000000001,
+exp2,demo,transient-crash,hybrid,5,5,repaired,2.11,2.106,
+exp2,demo,transient-crash,hybrid-14b,5,5,repaired,2.1,2.094,
+exp2,demo,transient-crash,hybrid-tools,5,5,repaired,2.1,2.1,
+exp2,demo,transient-crash,llm-only,5,5,repaired,2.11,2.138,
+exp2,demo,transient-crash,llm-only-14b,5,5,repaired,2.11,2.102,
+exp2,demo,transient-crash,llm-tools,5,5,repaired,2.09,2.332,
+exp3,boutique,bad-image,baseline,0,4,not repaired,,180.0,0.0
+exp3,boutique,bad-image,hybrid,4,4,repaired,25.395,24.62,0.0
+exp3,boutique,bad-image,hybrid-tools,4,4,repaired,78.815,81.22,0.0
+exp3,boutique,bad-image,llm-tools,4,4,repaired,81.735,86.0,0.0
+exp3,boutique,bad-image,restart,0,4,not repaired,,180.0,0.0
+exp3,boutique,bad-image,rules,0,4,not repaired,,180.0,0.0
+exp3,boutique,crash-release,baseline,0,4,not repaired,,180.0,0.0
+exp3,boutique,crash-release,hybrid,4,4,repaired,26.19,26.1925,0.0
+exp3,boutique,crash-release,hybrid-tools,4,4,repaired,26.755000000000003,26.0725,0.0
+exp3,boutique,crash-release,llm-tools,4,4,repaired,75.08500000000001,99.07,0.0
+exp3,boutique,crash-release,restart,0,4,not repaired,,180.0,0.0
+exp3,boutique,crash-release,rules,4,4,repaired,25.165,25.2425,0.0
+exp3,boutique,memory-release,baseline,0,4,not repaired,,180.0,0.0
+exp3,boutique,memory-release,hybrid,4,4,repaired,27.799999999999997,27.599999999999998,2.5
+exp3,boutique,memory-release,hybrid-tools,4,4,repaired,30.450000000000003,41.4975,0.0
+exp3,boutique,memory-release,llm-tools,4,4,repaired,88.66,104.83000000000001,0.0
+exp3,boutique,memory-release,restart,0,4,not repaired,,180.0,0.0
+exp3,boutique,memory-release,rules,4,4,repaired,31.045,42.227500000000006,18.4
+exp3,boutique,missing-secret,baseline,0,4,not repaired,,180.0,0.0
+exp3,boutique,missing-secret,hybrid,0,4,not repaired,,180.0,0.0
+exp3,boutique,missing-secret,hybrid-tools,3,4,partial,135.12,137.3,0.0
+exp3,boutique,missing-secret,llm-tools,4,4,repaired,59.8,60.58,0.0
+exp3,boutique,missing-secret,restart,0,4,not repaired,,180.0,0.0
+exp3,boutique,missing-secret,rules,0,4,not repaired,,180.0,0.0
+exp3,boutique,pod-kill,baseline,4,4,repaired,20.605,18.8575,19.6
+exp3,boutique,pod-kill,hybrid,4,4,repaired,20.115000000000002,20.112500000000004,19.1
+exp3,boutique,pod-kill,hybrid-tools,4,4,repaired,20.11,23.065,19.1
+exp3,boutique,pod-kill,llm-tools,4,4,repaired,20.105,20.105,19.1
+exp3,boutique,pod-kill,restart,4,4,repaired,20.115000000000002,21.475,19.1
+exp3,boutique,pod-kill,rules,4,4,repaired,18.105,18.1025,17.1
+exp3,boutique,unschedulable,baseline,0,4,not repaired,,180.0,0.0
+exp3,boutique,unschedulable,hybrid,0,4,not repaired,,180.0,0.0
+exp3,boutique,unschedulable,hybrid-tools,0,4,not repaired,,180.0,0.0
+exp3,boutique,unschedulable,llm-tools,0,4,not repaired,,180.0,0.0
+exp3,boutique,unschedulable,restart,0,4,not repaired,,180.0,0.0
+exp3,boutique,unschedulable,rules,0,4,not repaired,,180.0,0.0
+exp3,boutique,zero-replicas,baseline,0,4,not repaired,,180.0,300.05
+exp3,boutique,zero-replicas,hybrid,0,4,not repaired,,180.0,300.95
+exp3,boutique,zero-replicas,hybrid-tools,0,4,not repaired,,180.0,300.0
+exp3,boutique,zero-replicas,llm-tools,0,4,not repaired,,180.0,300.0
+exp3,boutique,zero-replicas,restart,0,4,not repaired,,180.0,300.15
+exp3,boutique,zero-replicas,rules,0,4,not repaired,,180.0,300.54999999999995

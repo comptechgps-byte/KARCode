@@ -1,0 +1,37 @@
+model,prompt,fault,decoding,seed,action,correct,fault_class,latency_s
+gemma2:9b,original,evicted,greedy,42,patch-limits,False,ResourceExhaustion,54.99
+gemma2:9b,original,evicted,sampled,1,patch-limits,False,resource-exhaustion,9.233
+gemma2:9b,original,evicted,sampled,2,patch-limits,False,ResourceExhaustion,10.231
+gemma2:9b,original,evicted,sampled,3,patch-limits,False,ResourceExhaustion,9.549
+gemma2:9b,original,transient-old-release,greedy,42,restart-pod,True,application,38.235
+gemma2:9b,original,transient-old-release,sampled,1,rollback-deployment,False,Application Crash,10.365
+gemma2:9b,original,transient-old-release,sampled,2,rollback-deployment,False,application,10.081
+gemma2:9b,original,transient-old-release,sampled,3,rollback-deployment,False,application,11.175
+gemma2:9b,original,oom-old-release,greedy,42,patch-limits,True,ResourceExhaustion,34.743
+gemma2:9b,original,oom-old-release,sampled,1,patch-limits,True,Resource Exhaustion,9.315
+gemma2:9b,original,oom-old-release,sampled,2,patch-limits,True,resource_constraint,9.505
+gemma2:9b,original,oom-old-release,sampled,3,patch-limits,True,resource_constraint,9.009
+gemma2:9b,paraphrase-a,evicted,greedy,42,patch-limits,False,ResourceExhaustion,32.75
+gemma2:9b,paraphrase-a,evicted,sampled,1,patch-limits,False,resource-exhaustion,10.895
+gemma2:9b,paraphrase-a,evicted,sampled,2,patch-limits,False,ResourceContention,11.136
+gemma2:9b,paraphrase-a,evicted,sampled,3,patch-limits,False,ResourceExhaustion,10.908
+gemma2:9b,paraphrase-a,transient-old-release,greedy,42,rollback-deployment,False,container_crash,33.01
+gemma2:9b,paraphrase-a,transient-old-release,sampled,1,restart-pod,True,ContainerCrash,13.528
+gemma2:9b,paraphrase-a,transient-old-release,sampled,2,rollback-deployment,False,application,11.576
+gemma2:9b,paraphrase-a,transient-old-release,sampled,3,rollback-deployment,False,application,12.03
+gemma2:9b,paraphrase-a,oom-old-release,greedy,42,patch-limits,True,resource_exhaustion,33.044
+gemma2:9b,paraphrase-a,oom-old-release,sampled,1,patch-limits,True,resource-exhaustion,10.252
+gemma2:9b,paraphrase-a,oom-old-release,sampled,2,rollback-deployment,False,resource_constraint,11.913
+gemma2:9b,paraphrase-a,oom-old-release,sampled,3,patch-limits,True,resource-exhaustion,10.984
+gemma2:9b,paraphrase-b,evicted,greedy,42,patch-limits,False,resource_exhaustion,33.584
+gemma2:9b,paraphrase-b,evicted,sampled,1,patch-limits,False,ResourceExhaustion,10.243
+gemma2:9b,paraphrase-b,evicted,sampled,2,patch-limits,False,resource-exhaustion,10.342
+gemma2:9b,paraphrase-b,evicted,sampled,3,patch-limits,False,resource_exhaustion,10.208
+gemma2:9b,paraphrase-b,transient-old-release,greedy,42,rollback-deployment,False,application_crash,33.629
+gemma2:9b,paraphrase-b,transient-old-release,sampled,1,restart-pod,True,application_crash,13.76
+gemma2:9b,paraphrase-b,transient-old-release,sampled,2,rollback-deployment,False,container_crash,10.538
+gemma2:9b,paraphrase-b,transient-old-release,sampled,3,rollback-deployment,False,container_crash,10.827
+gemma2:9b,paraphrase-b,oom-old-release,greedy,42,patch-limits,True,resource_exhaustion,33.535
+gemma2:9b,paraphrase-b,oom-old-release,sampled,1,patch-limits,True,ResourceContention,10.927
+gemma2:9b,paraphrase-b,oom-old-release,sampled,2,patch-limits,True,resource-constraint,10.495
+gemma2:9b,paraphrase-b,oom-old-release,sampled,3,patch-limits,True,resource_exhaustion,10.643

@@ -1,0 +1,61 @@
+model,prompt,fault,decoding,seed,action,correct,fault_class,latency_s
+qwen2.5:3b-instruct,original,oom-kill,greedy,42,patch-limits,True,ResourceLimitExceeded,16.941
+qwen2.5:3b-instruct,original,oom-kill,sampled,1,patch-limits,True,ResourceManagement,3.565
+qwen2.5:3b-instruct,original,oom-kill,sampled,2,patch-limits,True,resource_limits_exceeded,3.201
+qwen2.5:3b-instruct,original,oom-kill,sampled,3,restart-pod,False,ResourceLimitExceeded,4.194
+qwen2.5:3b-instruct,original,crashloop,greedy,42,rollback-deployment,True,container_crash_loop,7.664
+qwen2.5:3b-instruct,original,crashloop,sampled,1,rollback-deployment,True,Container CrashLoopBackOff,3.901
+qwen2.5:3b-instruct,original,crashloop,sampled,2,rollback-deployment,True,container_crash_loop_backoff,3.62
+qwen2.5:3b-instruct,original,crashloop,sampled,3,rollback-deployment,True,ContainerCrashLoopBackOff,3.829
+qwen2.5:3b-instruct,original,net-partition,greedy,42,restart-pod,False,readiness_probe_failure,6.576
+qwen2.5:3b-instruct,original,net-partition,sampled,1,restart-pod,False,readiness_probing_failure,3.266
+qwen2.5:3b-instruct,original,net-partition,sampled,2,restart-pod,False,ReadinessProbeFailure,3.253
+qwen2.5:3b-instruct,original,net-partition,sampled,3,restart-pod,False,readiness_probe_failure,3.305
+qwen2.5:3b-instruct,original,bad-image,greedy,42,rollback-deployment,True,ImagePullBackOff,7.619
+qwen2.5:3b-instruct,original,bad-image,sampled,1,rollback-deployment,True,ImagePullFailure,3.429
+qwen2.5:3b-instruct,original,bad-image,sampled,2,rollback-deployment,True,ImagePullFailed,2.796
+qwen2.5:3b-instruct,original,bad-image,sampled,3,rollback-deployment,True,ImagePullBackOff,3.296
+qwen2.5:3b-instruct,original,missing-config,greedy,42,rollback-deployment,True,Configuration Issue,6.867
+qwen2.5:3b-instruct,original,missing-config,sampled,1,rollback-deployment,True,Configuration Error,3.1
+qwen2.5:3b-instruct,original,missing-config,sampled,2,rollback-deployment,True,Configuration Issue,3.199
+qwen2.5:3b-instruct,original,missing-config,sampled,3,rollback-deployment,True,Configuration Issue,3.799
+qwen2.5:3b-instruct,paraphrase-a,oom-kill,greedy,42,patch-limits,True,OOMKilled,11.769
+qwen2.5:3b-instruct,paraphrase-a,oom-kill,sampled,1,scale-deployment,False,OOMKilled,3.546
+qwen2.5:3b-instruct,paraphrase-a,oom-kill,sampled,2,patch-limits,True,ResourceLimitExceeded,3.197
+qwen2.5:3b-instruct,paraphrase-a,oom-kill,sampled,3,patch-limits,True,OOMKilled,3.27
+qwen2.5:3b-instruct,paraphrase-a,crashloop,greedy,42,rollback-deployment,True,container_crash,6.625
+qwen2.5:3b-instruct,paraphrase-a,crashloop,sampled,1,restart-pod,False,container_restart_limit_exceeded,4.741
+qwen2.5:3b-instruct,paraphrase-a,crashloop,sampled,2,rollback-deployment,True,ContainerCrashLoop,4.01
+qwen2.5:3b-instruct,paraphrase-a,crashloop,sampled,3,restart-pod,False,container_crash_loop,4.138
+qwen2.5:3b-instruct,paraphrase-a,net-partition,greedy,42,restart-pod,False,readiness_probe_failure,6.489
+qwen2.5:3b-instruct,paraphrase-a,net-partition,sampled,1,restart-pod,False,readiness_probing_failure,3.659
+qwen2.5:3b-instruct,paraphrase-a,net-partition,sampled,2,rollback-deployment,False,ReadinessProbeFailure,3.328
+qwen2.5:3b-instruct,paraphrase-a,net-partition,sampled,3,rollback-deployment,False,readiness_probe_failure,3.435
+qwen2.5:3b-instruct,paraphrase-a,bad-image,greedy,42,rollback-deployment,True,ImagePullFailed,6.849
+qwen2.5:3b-instruct,paraphrase-a,bad-image,sampled,1,rollback-deployment,True,ImagePullbackOff,4.085
+qwen2.5:3b-instruct,paraphrase-a,bad-image,sampled,2,rollback-deployment,True,ImagePullFailed,3.448
+qwen2.5:3b-instruct,paraphrase-a,bad-image,sampled,3,rollback-deployment,True,ImagePullBackOff,3.548
+qwen2.5:3b-instruct,paraphrase-a,missing-config,greedy,42,rollback-deployment,True,ConfigurationError,6.306
+qwen2.5:3b-instruct,paraphrase-a,missing-config,sampled,1,rollback-deployment,True,ConfigurationError,3.322
+qwen2.5:3b-instruct,paraphrase-a,missing-config,sampled,2,rollback-deployment,True,ConfigurationError,3.33
+qwen2.5:3b-instruct,paraphrase-a,missing-config,sampled,3,rollback-deployment,True,ConfigurationError,3.979
+qwen2.5:3b-instruct,paraphrase-b,oom-kill,greedy,42,patch-limits,True,Transient,11.448
+qwen2.5:3b-instruct,paraphrase-b,oom-kill,sampled,1,scale-deployment,False,Transient Fault,3.086
+qwen2.5:3b-instruct,paraphrase-b,oom-kill,sampled,2,scale-deployment,False,Transient,3.114
+qwen2.5:3b-instruct,paraphrase-b,oom-kill,sampled,3,scale-deployment,False,Transient,2.957
+qwen2.5:3b-instruct,paraphrase-b,crashloop,greedy,42,rollback-deployment,True,Deployment Rollback,6.481
+qwen2.5:3b-instruct,paraphrase-b,crashloop,sampled,1,rollback-deployment,True,Deployment Upgrade,3.073
+qwen2.5:3b-instruct,paraphrase-b,crashloop,sampled,2,rollback-deployment,True,Deployment Rollback,2.949
+qwen2.5:3b-instruct,paraphrase-b,crashloop,sampled,3,rollback-deployment,True,Deployment Rollback,2.849
+qwen2.5:3b-instruct,paraphrase-b,net-partition,greedy,42,restart-pod,False,Transient,6.594
+qwen2.5:3b-instruct,paraphrase-b,net-partition,sampled,1,restart-pod,False,Transient,3.612
+qwen2.5:3b-instruct,paraphrase-b,net-partition,sampled,2,restart-pod,False,Transient,3.451
+qwen2.5:3b-instruct,paraphrase-b,net-partition,sampled,3,restart-pod,False,Transient,3.077
+qwen2.5:3b-instruct,paraphrase-b,bad-image,greedy,42,rollback-deployment,True,ImagePullFailure,6.406
+qwen2.5:3b-instruct,paraphrase-b,bad-image,sampled,1,rollback-deployment,True,ImagePullFailure,3.394
+qwen2.5:3b-instruct,paraphrase-b,bad-image,sampled,2,restart-pod,False,image_pull_failure,3.3
+qwen2.5:3b-instruct,paraphrase-b,bad-image,sampled,3,restart-pod,False,ImagePullBackOff,3.515
+qwen2.5:3b-instruct,paraphrase-b,missing-config,greedy,42,rollback-deployment,True,ConfigurationError,6.441
+qwen2.5:3b-instruct,paraphrase-b,missing-config,sampled,1,rollback-deployment,True,Configuration Issue,3.179
+qwen2.5:3b-instruct,paraphrase-b,missing-config,sampled,2,rollback-deployment,True,ConfigurationError,3.114
+qwen2.5:3b-instruct,paraphrase-b,missing-config,sampled,3,rollback-deployment,True,ConfigurationError,3.238

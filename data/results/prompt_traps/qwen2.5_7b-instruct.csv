@@ -1,0 +1,37 @@
+model,prompt,fault,decoding,seed,action,correct,fault_class,latency_s
+qwen2.5:7b-instruct,original,evicted,greedy,42,patch-limits,False,Insufficient memory resources,36.996
+qwen2.5:7b-instruct,original,evicted,sampled,1,patch-limits,False,ResourceLimit,6.789
+qwen2.5:7b-instruct,original,evicted,sampled,2,patch-limits,False,Memory resource limit exceeded,7.504
+qwen2.5:7b-instruct,original,evicted,sampled,3,scale-deployment,False,Insufficient memory,6.988
+qwen2.5:7b-instruct,original,transient-old-release,greedy,42,restart-pod,True,Crashing container,17.537
+qwen2.5:7b-instruct,original,transient-old-release,sampled,1,rollback-deployment,False,crashing_new_version,7.705
+qwen2.5:7b-instruct,original,transient-old-release,sampled,2,restart-pod,True,crashing-container,8.581
+qwen2.5:7b-instruct,original,transient-old-release,sampled,3,rollback-deployment,False,Crashing container due to signal 11 (SIGSEGV),10.051
+qwen2.5:7b-instruct,original,oom-old-release,greedy,42,patch-limits,True,Out of Memory,15.081
+qwen2.5:7b-instruct,original,oom-old-release,sampled,1,patch-limits,True,Out Of Memory,6.014
+qwen2.5:7b-instruct,original,oom-old-release,sampled,2,patch-limits,True,Out of Memory,7.256
+qwen2.5:7b-instruct,original,oom-old-release,sampled,3,patch-limits,True,Out of Memory,6.386
+qwen2.5:7b-instruct,paraphrase-a,evicted,greedy,42,patch-limits,False,ResourceLimitExceeded,27.614
+qwen2.5:7b-instruct,paraphrase-a,evicted,sampled,1,patch-limits,False,ResourceLimitExceeded,6.75
+qwen2.5:7b-instruct,paraphrase-a,evicted,sampled,2,patch-limits,False,ResourceLimitExceeded,6.943
+qwen2.5:7b-instruct,paraphrase-a,evicted,sampled,3,patch-limits,False,MemoryLimitExceeded,7.321
+qwen2.5:7b-instruct,paraphrase-a,transient-old-release,greedy,42,rollback-deployment,False,crashing_new_version,15.326
+qwen2.5:7b-instruct,paraphrase-a,transient-old-release,sampled,1,restart-pod,True,transient-container-failure,8.131
+qwen2.5:7b-instruct,paraphrase-a,transient-old-release,sampled,2,restart-pod,True,transient-container-issue,9.39
+qwen2.5:7b-instruct,paraphrase-a,transient-old-release,sampled,3,restart-pod,True,CrashingContainer,8.009
+qwen2.5:7b-instruct,paraphrase-a,oom-old-release,greedy,42,patch-limits,True,Out of Memory,15.062
+qwen2.5:7b-instruct,paraphrase-a,oom-old-release,sampled,1,patch-limits,True,Out Of Memory,6.4
+qwen2.5:7b-instruct,paraphrase-a,oom-old-release,sampled,2,patch-limits,True,Out of Memory,6.36
+qwen2.5:7b-instruct,paraphrase-a,oom-old-release,sampled,3,patch-limits,True,Out of Memory,6.472
+qwen2.5:7b-instruct,paraphrase-b,evicted,greedy,42,patch-limits,False,memory-limited,26.344
+qwen2.5:7b-instruct,paraphrase-b,evicted,sampled,1,patch-limits,False,MemoryLimitExceeded,6.713
+qwen2.5:7b-instruct,paraphrase-b,evicted,sampled,2,patch-limits,False,ResourceLimitExceeded,7.434
+qwen2.5:7b-instruct,paraphrase-b,evicted,sampled,3,patch-limits,False,memory_limit_exceeded,6.814
+qwen2.5:7b-instruct,paraphrase-b,transient-old-release,greedy,42,patch-limits,False,oomkilled,15.263
+qwen2.5:7b-instruct,paraphrase-b,transient-old-release,sampled,1,restart-pod,True,crashing-container,9.024
+qwen2.5:7b-instruct,paraphrase-b,transient-old-release,sampled,2,patch-limits,False,oomkilled,8.836
+qwen2.5:7b-instruct,paraphrase-b,transient-old-release,sampled,3,patch-limits,False,oomkilled,7.535
+qwen2.5:7b-instruct,paraphrase-b,oom-old-release,greedy,42,patch-limits,True,OOMKilled,16.402
+qwen2.5:7b-instruct,paraphrase-b,oom-old-release,sampled,1,patch-limits,True,OOMKilled,7.232
+qwen2.5:7b-instruct,paraphrase-b,oom-old-release,sampled,2,patch-limits,True,OOMKilled,7.781
+qwen2.5:7b-instruct,paraphrase-b,oom-old-release,sampled,3,patch-limits,True,OOMKilled,7.422

@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# v2 experiments (agent frozen at v2.1).
+# Manuscript v2 experiments (agent frozen at v2.1).
 # Resumable: re-running skips completed trials. Log: results/v2_experiments.log
-# Configuration Developed by Abhijeet Bajpayee
 set -uo pipefail
 cd "$(dirname "$0")/.."
 B="python benchmark/run_benchmark.py --max-wait 300"

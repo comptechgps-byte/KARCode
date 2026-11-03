@@ -48,7 +48,7 @@ Conditions (`benchmark/run_benchmark.py`, `CONDITION_ENV`): `baseline`, `restart
 (failure-triggered escalation, agent v3.1) variants. Agent versions: v2.0 (Experiment 1), v2.1 (Experiments 2-3), v3.0
 (Experiments 2R and 4-9) and v3.1 (Experiment 10).
 
-## Related with paper work
+## Reproducing the paper
 
 Requirements: Docker (≥ 16 GB RAM assigned, ≥ 8 physical cores recommended). Everything
 else runs in containers.
@@ -85,8 +85,16 @@ docker exec runner python benchmark/adversarial_eval.py --url http://<ollama-ip>
 docker exec runner python benchmark/prompt_sensitivity.py --url http://<ollama-ip>:11434 --model qwen2.5:7b-instruct [--set traps|traps2]
 
 # 7. statistics, tables, figures, macros
-docker exec runner python benchmark/analyze_results.py results/main --fig-dir /figures --tab-dir /tables
-docker exec runner python benchmark/analyze_v2.py --exp1 results/main --exp2 results/exp2a results/exp2b \  
+docker exec runner python benchmark/analyze_results.py results/main --fig-dir paper/figures --tab-dir paper/tables
+docker exec runner python benchmark/paper_numbers.py --main results/main --adv results/adversarial --paper paper
+docker exec runner python benchmark/analyze_v2.py --exp1 results/main --exp2 results/exp2a results/exp2b \
+  --exp3 results/exp3 --fig-dir paper/figures --tab-dir paper/tables --out results/v2_analysis
+docker exec runner python benchmark/paper_numbers_v2.py
+docker exec runner python benchmark/paper_numbers_v3.py
+docker exec runner python benchmark/paper_numbers_v4.py
+docker exec runner python benchmark/paper_numbers_v5.py
+docker exec runner python benchmark/paper_numbers_v6.py   # after v5: both write tables/prompt_traps.tex
+docker exec runner python benchmark/paper_numbers_v7.py
 docker exec runner python benchmark/tables_v4.py          # consolidated outcome / TTR tables
 ```
 
@@ -128,3 +136,17 @@ tools/runner/ reproducible runner image (pinned versions)
 tests/        unit tests for rules, escalation, gate and tools
 data/         experimental data (results/) and the audit of the v1 prototype
 ```
+
+## Authors
+
+Department of Information Technology, National Institute of Technology Raipur, India
+
+- Abhijeet Bajpayee (abajpayee.phd2026.it@nitrr.ac.in)
+- Tirath Prasad Sahu (tpsahu.it@nitrr.ac.in)
+- Rakesh Tripathi (rtripathi.it@nitrr.ac.in)
+
+## License
+
+MIT, see `LICENSE`. The Online Boutique manifests in `testbeds/boutique/`
+(`upstream-kubernetes-manifests.yaml` and `boutique.yaml`, derived from it) come from
+Google's microservices-demo project and remain under its Apache License 2.0.

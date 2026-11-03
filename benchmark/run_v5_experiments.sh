@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# v5 experiments (agent unchanged: v3.0; harness
+# Manuscript v5 experiments (agent unchanged: v3.0; harness
 # adds a model warm-up before injection).
 #   Exp 7 — 14B with generic tools (completes tools x capability)
 #   Exp 8 — a second model family live: Llama-3.1-8B

@@ -1,5 +1,4 @@
 """
-Developed and Edited by Abhijeet Bajpayee
 telemetry.py — collects the raw signals the diagnosis stage reasons over:
 pod phase, container state *and last state* (waiting/terminated reasons,
 exit codes, restart counts), recent Events for the pod, and a tail of

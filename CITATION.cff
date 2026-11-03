@@ -17,9 +17,9 @@ authors:
     email: rtripathi.it@nitrr.ac.in
 version: "3.1"
 date-released: "2026-10-03"
-# repository-code: Will be upodated after reviewer's Comment
-# doi: Will be upodated after reviewer's Comment
-# license: Will be upodated after reviewer's Comment
+repository-code: "https://github.com/comptechgps-byte/KARCode"
+# doi: <insert Zenodo DOI>
+license: MIT
 keywords:
   - Kubernetes
   - self-healing

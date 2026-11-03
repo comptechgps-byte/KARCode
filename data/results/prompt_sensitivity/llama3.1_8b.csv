@@ -1,0 +1,61 @@
+model,prompt,fault,decoding,seed,action,correct,fault_class,latency_s
+llama3.1:8b,original,oom-kill,greedy,42,patch-limits,True,OOMKilled,40.813
+llama3.1:8b,original,oom-kill,sampled,1,patch-limits,True,OOMKilled,7.603
+llama3.1:8b,original,oom-kill,sampled,2,patch-limits,True,ResourceExhaustion,7.38
+llama3.1:8b,original,oom-kill,sampled,3,patch-limits,True,OOMKilled,7.465
+llama3.1:8b,original,crashloop,greedy,42,rollback-deployment,True,deployment,15.525
+llama3.1:8b,original,crashloop,sampled,1,rollback-deployment,True,application fault,7.662
+llama3.1:8b,original,crashloop,sampled,2,rollback-deployment,True,deployment,7.246
+llama3.1:8b,original,crashloop,sampled,3,rollback-deployment,True,deployment,7.761
+llama3.1:8b,original,net-partition,greedy,42,rollback-deployment,False,deployment,15.01
+llama3.1:8b,original,net-partition,sampled,1,rollback-deployment,False,bad-release,7.747
+llama3.1:8b,original,net-partition,sampled,2,rollback-deployment,False,deployment,6.907
+llama3.1:8b,original,net-partition,sampled,3,rollback-deployment,False,deployment,8.294
+llama3.1:8b,original,bad-image,greedy,42,rollback-deployment,True,ImagePullError,15.859
+llama3.1:8b,original,bad-image,sampled,1,rollback-deployment,True,deployment-related,6.595
+llama3.1:8b,original,bad-image,sampled,2,rollback-deployment,True,ImagePullBackOff,7.825
+llama3.1:8b,original,bad-image,sampled,3,rollback-deployment,True,ImagePullBackOff,8.002
+llama3.1:8b,original,missing-config,greedy,42,rollback-deployment,True,ConfigError,14.829
+llama3.1:8b,original,missing-config,sampled,1,rollback-deployment,True,deployment-configuration,7.05
+llama3.1:8b,original,missing-config,sampled,2,rollback-deployment,True,ConfigError,7.455
+llama3.1:8b,original,missing-config,sampled,3,rollback-deployment,True,config,6.85
+llama3.1:8b,paraphrase-a,oom-kill,greedy,42,patch-limits,True,OOMKilled,31.724
+llama3.1:8b,paraphrase-a,oom-kill,sampled,1,patch-limits,True,kubernetes_resource_unhealthy,8.775
+llama3.1:8b,paraphrase-a,oom-kill,sampled,2,patch-limits,True,OOMKilled,8.991
+llama3.1:8b,paraphrase-a,oom-kill,sampled,3,patch-limits,True,ResourceExhaustion,10.074
+llama3.1:8b,paraphrase-a,crashloop,greedy,42,rollback-deployment,True,deployment,20.849
+llama3.1:8b,paraphrase-a,crashloop,sampled,1,rollback-deployment,True,ReleaseFailure,13.002
+llama3.1:8b,paraphrase-a,crashloop,sampled,2,rollback-deployment,True,bad release,10.593
+llama3.1:8b,paraphrase-a,crashloop,sampled,3,rollback-deployment,True,deployment,7.732
+llama3.1:8b,paraphrase-a,net-partition,greedy,42,rollback-deployment,False,deployment,17.797
+llama3.1:8b,paraphrase-a,net-partition,sampled,1,rollback-deployment,False,Deploy-time,8.131
+llama3.1:8b,paraphrase-a,net-partition,sampled,2,restart-pod,False,Transient,9.339
+llama3.1:8b,paraphrase-a,net-partition,sampled,3,rollback-deployment,False,deployment,11.202
+llama3.1:8b,paraphrase-a,bad-image,greedy,42,rollback-deployment,True,ImagePullError,20.283
+llama3.1:8b,paraphrase-a,bad-image,sampled,1,rollback-deployment,True,Deploy-time,9.631
+llama3.1:8b,paraphrase-a,bad-image,sampled,2,rollback-deployment,True,image-pull-error,7.67
+llama3.1:8b,paraphrase-a,bad-image,sampled,3,rollback-deployment,True,ImagePullError,9.223
+llama3.1:8b,paraphrase-a,missing-config,greedy,42,rollback-deployment,True,deployment,17.579
+llama3.1:8b,paraphrase-a,missing-config,sampled,1,rollback-deployment,True,ResourceUnavailable,9.764
+llama3.1:8b,paraphrase-a,missing-config,sampled,2,rollback-deployment,True,config_error,9.245
+llama3.1:8b,paraphrase-a,missing-config,sampled,3,rollback-deployment,True,deployment,9.229
+llama3.1:8b,paraphrase-b,oom-kill,greedy,42,patch-limits,True,OOMKilled,28.555
+llama3.1:8b,paraphrase-b,oom-kill,sampled,1,patch-limits,True,resource_exhaustion,7.514
+llama3.1:8b,paraphrase-b,oom-kill,sampled,2,patch-limits,True,OOMKilled,7.85
+llama3.1:8b,paraphrase-b,oom-kill,sampled,3,patch-limits,True,OOMKilled,6.617
+llama3.1:8b,paraphrase-b,crashloop,greedy,42,rollback-deployment,True,bad release,17.249
+llama3.1:8b,paraphrase-b,crashloop,sampled,1,rollback-deployment,True,deployment_release_failure,9.331
+llama3.1:8b,paraphrase-b,crashloop,sampled,2,rollback-deployment,True,bad release,7.97
+llama3.1:8b,paraphrase-b,crashloop,sampled,3,rollback-deployment,True,bad release,7.53
+llama3.1:8b,paraphrase-b,net-partition,greedy,42,rollback-deployment,False,bad release,15.803
+llama3.1:8b,paraphrase-b,net-partition,sampled,1,rollback-deployment,False,Bad release,8.48
+llama3.1:8b,paraphrase-b,net-partition,sampled,2,rollback-deployment,False,bad release,7.126
+llama3.1:8b,paraphrase-b,net-partition,sampled,3,rollback-deployment,False,bad release,7.968
+llama3.1:8b,paraphrase-b,bad-image,greedy,42,rollback-deployment,True,bad release,15.625
+llama3.1:8b,paraphrase-b,bad-image,sampled,1,rollback-deployment,True,release,7.558
+llama3.1:8b,paraphrase-b,bad-image,sampled,2,rollback-deployment,True,bad release,6.725
+llama3.1:8b,paraphrase-b,bad-image,sampled,3,rollback-deployment,True,bad release,8.853
+llama3.1:8b,paraphrase-b,missing-config,greedy,42,rollback-deployment,True,bad release,16.33
+llama3.1:8b,paraphrase-b,missing-config,sampled,1,rollback-deployment,True,release error,7.887
+llama3.1:8b,paraphrase-b,missing-config,sampled,2,rollback-deployment,True,bad release,7.816
+llama3.1:8b,paraphrase-b,missing-config,sampled,3,rollback-deployment,True,bad release,6.639

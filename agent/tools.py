@@ -1,5 +1,4 @@
 """
-Developed and Edited by Abhijeet Bajpayees
 tools.py — read-only cluster tools for the tool-augmented LLM modes
 (`hybrid-tools`, `llm-tools`). They let the model look beyond the pod
 snapshot the way an SRE would ("what changed?", "is the referenced config

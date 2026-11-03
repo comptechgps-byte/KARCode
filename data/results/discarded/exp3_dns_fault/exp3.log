@@ -1,0 +1,112 @@
+[1/168] b01-unschedulable-llm-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[2/168] b01-missing-secret-hybrid-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[3/168] b01-pod-kill-baseline
+    -> recovered=True ttr=30.12 first_action= valid=True 
+[4/168] b01-memory-release-hybrid-tools
+    -> recovered=True ttr=104.09 first_action=patch-limits valid=True 
+[5/168] b01-memory-release-llm-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[6/168] b01-unschedulable-hybrid
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[7/168] b01-memory-release-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[8/168] b01-bad-image-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[9/168] b01-pod-kill-hybrid-tools
+    -> recovered=True ttr=21.12 first_action= valid=True 
+[10/168] b01-zero-replicas-llm-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[11/168] b01-pod-kill-rules
+    -> recovered=True ttr=21.11 first_action= valid=True 
+[12/168] b01-crash-release-llm-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[13/168] b01-bad-image-hybrid
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[14/168] b01-zero-replicas-hybrid-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[15/168] b01-missing-secret-restart
+    -> recovered=None ttr=None first_action=None valid=False RuntimeError: testbed unhealthy after reset
+[16/168] b01-pod-kill-llm-tools
+    -> recovered=None ttr=None first_action=None valid=False RuntimeError: testbed unhealthy after reset
+[17/168] b01-bad-image-baseline
+[15/168] b01-missing-secret-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[16/168] b01-pod-kill-llm-tools
+    -> recovered=True ttr=20.11 first_action= valid=True 
+[17/168] b01-bad-image-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[18/168] b01-unschedulable-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[19/168] b01-zero-replicas-hybrid
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[20/168] b01-unschedulable-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[21/168] b01-missing-secret-hybrid
+    -> recovered=False ttr=300.0 first_action=patch-limits valid=True 
+[22/168] b01-pod-kill-restart
+    -> recovered=True ttr=20.12 first_action= valid=True 
+[23/168] b01-missing-secret-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[24/168] b01-zero-replicas-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[25/168] b01-crash-release-hybrid-tools
+    -> recovered=True ttr=25.81 first_action=rollback-deployment valid=True 
+[26/168] b01-crash-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[27/168] b01-zero-replicas-rules
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[28/168] b01-memory-release-rules
+    -> recovered=True ttr=28.79 first_action=patch-limits valid=True 
+[29/168] b01-bad-image-llm-tools
+    -> recovered=True ttr=72.44 first_action=rollback-deployment valid=True 
+[30/168] b01-unschedulable-hybrid-tools
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[31/168] b01-bad-image-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[32/168] b01-crash-release-rules
+    -> recovered=True ttr=25.84 first_action=rollback-deployment valid=True 
+[33/168] b01-bad-image-hybrid-tools
+    -> recovered=True ttr=89.82 first_action=rollback-deployment valid=True 
+[34/168] b01-memory-release-baseline
+    -> recovered=False ttr=300.0 first_action= valid=True 
+[35/168] b01-crash-release-hybrid
+    -> recovered=True ttr=28.36 first_action=rollback-deployment valid=True 
+[36/168] b01-crash-release-restart
+    -> recovered=False ttr=300.0 first_action=restart-pod valid=True 
+[37/168] b01-unschedulable-restart
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'adservice']' returned non-zero exit status 1.
+[38/168] b01-zero-replicas-restart
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'cartservice']' returned non-zero exit status 1.
+[39/168] b01-pod-kill-hybrid
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'frontend']' returned non-zero exit status 1.
+[40/168] b01-missing-secret-llm-tools
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'shippingservice']' returned non-zero exit status 1.
+[41/168] b01-missing-secret-rules
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'shippingservice']' returned non-zero exit status 1.
+[42/168] b01-memory-release-hybrid
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'cartservice']' returned non-zero exit status 1.
+[43/168] b02-missing-secret-rules
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'shippingservice']' returned non-zero exit status 1.
+[44/168] b02-memory-release-llm-tools
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'cartservice']' returned non-zero exit status 1.
+[45/168] b02-zero-replicas-rules
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'cartservice']' returned non-zero exit status 1.
+[46/168] b02-missing-secret-restart
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'shippingservice']' returned non-zero exit status 1.
+[47/168] b02-bad-image-rules
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'productcatalogservice']' returned non-zero exit status 1.
+[48/168] b02-crash-release-hybrid-tools
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'currencyservice']' returned non-zero exit status 1.
+[49/168] b02-pod-kill-hybrid-tools
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'frontend']' returned non-zero exit status 1.
+[50/168] b02-pod-kill-hybrid
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'frontend']' returned non-zero exit status 1.
+[51/168] b02-bad-image-llm-tools
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'productcatalogservice']' returned non-zero exit status 1.
+[52/168] b02-crash-release-hybrid
+    -> recovered=None ttr=None first_action=None valid=False CalledProcessError: Command '['bash', '/work/testbeds/boutique/inject.sh', 'reset', 'currencyservice']' returned non-zero exit status 1.
+[53/168] b02-unschedulable-hybrid-tools
+    -> recovered=None ttr=None first_action=None valid=False RuntimeError: testbed unhealthy after reset
+[54/168] b02-memory-release-baseline

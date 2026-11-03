@@ -1,5 +1,4 @@
 """
-Developed and Edited by Abhijeet Bajpayee
 diagnosis.py — turns a PodSnapshot into a Diagnosis (fault class + proposed
 remediation). Modes (DIAGNOSIS_MODE):
 

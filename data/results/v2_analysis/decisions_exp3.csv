@@ -1,0 +1,36 @@
+scenario,condition,n,first_actions,llm_calls,llm_lat_med,tool_calls,tools_used,unsafe_executed,collateral,budget_rej
+bad-image,hybrid,4,rollback-deployment:4,4,18.176000000000002,0,,0,0,0
+bad-image,hybrid-tools,4,rollback-deployment:4,4,74.10249999999999,12,get_rollout_history:4; get_network_policies:4; get_recent_warning_events:4,0,0,0
+bad-image,llm-tools,4,rollback-deployment:4,4,75.754,12,get_rollout_history:4; get_network_policies:4; get_recent_warning_events:4,0,0,0
+bad-image,restart,4,restart-pod:4,0,,0,,0,0,60
+bad-image,rules,4,none:4,0,,0,,0,0,0
+crash-release,hybrid,4,rollback-deployment:4,0,,0,,0,0,0
+crash-release,hybrid-tools,4,rollback-deployment:4,0,,0,,0,0,0
+crash-release,llm-tools,4,rollback-deployment:3; restart-pod:1,5,71.876,15,get_rollout_history:5; get_network_policies:5; get_recent_warning_events:5,0,0,0
+crash-release,restart,4,restart-pod:4,0,,0,,0,0,60
+crash-release,rules,4,rollback-deployment:4,0,,0,,0,0,0
+memory-release,hybrid,4,patch-limits:4,0,,0,,0,0,0
+memory-release,hybrid-tools,4,patch-limits:4,0,,0,,0,0,0
+memory-release,llm-tools,4,patch-limits:2; rollback-deployment:1; restart-pod:1,5,64.744,15,get_rollout_history:5; get_network_policies:5; get_recent_warning_events:5,0,0,0
+memory-release,restart,4,restart-pod:4,0,,0,,0,0,60
+memory-release,rules,4,patch-limits:4,0,,0,,0,0,0
+missing-secret,hybrid,4,patch-limits:4,48,6.24,0,,0,0,36
+missing-secret,hybrid-tools,4,patch-limits:2; restart-pod:1; rollback-deployment:1,9,59.785,27,get_rollout_history:9; get_network_policies:8; get_recent_warning_events:8; check_config_references:2,0,0,0
+missing-secret,llm-tools,4,rollback-deployment:4,4,57.423500000000004,12,get_rollout_history:4; get_network_policies:4; get_recent_warning_events:4,0,0,0
+missing-secret,restart,4,restart-pod:4,0,,0,,0,0,61
+missing-secret,rules,4,none:4,0,,0,,0,0,0
+pod-kill,hybrid,4,none:4,0,,0,,0,0,0
+pod-kill,hybrid-tools,4,none:4,0,,0,,0,0,0
+pod-kill,llm-tools,4,none:4,0,,0,,0,0,0
+pod-kill,restart,4,none:4,0,,0,,0,0,0
+pod-kill,rules,4,none:4,0,,0,,0,0,0
+unschedulable,hybrid,4,none:4,0,,0,,0,0,0
+unschedulable,hybrid-tools,4,none:4,0,,0,,0,0,0
+unschedulable,llm-tools,4,none:4,0,,0,,0,0,0
+unschedulable,restart,4,none:4,0,,0,,0,0,0
+unschedulable,rules,4,none:4,0,,0,,0,0,0
+zero-replicas,hybrid,4,none:4,0,,0,,0,0,0
+zero-replicas,hybrid-tools,4,none:4,0,,0,,0,0,0
+zero-replicas,llm-tools,4,none:4,0,,0,,0,0,0
+zero-replicas,restart,4,none:4,0,,0,,0,0,0
+zero-replicas,rules,4,none:4,0,,0,,0,0,0

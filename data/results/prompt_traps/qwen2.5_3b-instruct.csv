@@ -1,0 +1,37 @@
+model,prompt,fault,decoding,seed,action,correct,fault_class,latency_s
+qwen2.5:3b-instruct,original,evicted,greedy,42,patch-limits,False,resource_limit_exceeded,16.02
+qwen2.5:3b-instruct,original,evicted,sampled,1,patch-limits,False,Resource Limit Exceeded,3.497
+qwen2.5:3b-instruct,original,evicted,sampled,2,restart-pod,True,resource_limits_exceeded,4.102
+qwen2.5:3b-instruct,original,evicted,sampled,3,patch-limits,False,ResourceLimitExceeded,3.215
+qwen2.5:3b-instruct,original,transient-old-release,greedy,42,restart-pod,True,Transient State,8.261
+qwen2.5:3b-instruct,original,transient-old-release,sampled,1,restart-pod,True,ContainerError,4.129
+qwen2.5:3b-instruct,original,transient-old-release,sampled,2,restart-pod,True,container_crash,4.607
+qwen2.5:3b-instruct,original,transient-old-release,sampled,3,rollback-deployment,False,Container Crash,3.685
+qwen2.5:3b-instruct,original,oom-old-release,greedy,42,patch-limits,True,OOMKilled,7.229
+qwen2.5:3b-instruct,original,oom-old-release,sampled,1,patch-limits,True,OOMKilled,3.577
+qwen2.5:3b-instruct,original,oom-old-release,sampled,2,patch-limits,True,OOMKilled,3.904
+qwen2.5:3b-instruct,original,oom-old-release,sampled,3,patch-limits,True,OOMKilled,3.49
+qwen2.5:3b-instruct,paraphrase-a,evicted,greedy,42,patch-limits,False,OOMKilled,12.357
+qwen2.5:3b-instruct,paraphrase-a,evicted,sampled,1,patch-limits,False,OOMKilled,3.378
+qwen2.5:3b-instruct,paraphrase-a,evicted,sampled,2,patch-limits,False,resource_limit_exceeded,3.61
+qwen2.5:3b-instruct,paraphrase-a,evicted,sampled,3,patch-limits,False,ResourceLimitExceeded,3.282
+qwen2.5:3b-instruct,paraphrase-a,transient-old-release,greedy,42,restart-pod,True,container_restart,7.588
+qwen2.5:3b-instruct,paraphrase-a,transient-old-release,sampled,1,restart-pod,True,TransientState,4.451
+qwen2.5:3b-instruct,paraphrase-a,transient-old-release,sampled,2,restart-pod,True,container_restart,4.132
+qwen2.5:3b-instruct,paraphrase-a,transient-old-release,sampled,3,restart-pod,True,ContainerRestarted,4.262
+qwen2.5:3b-instruct,paraphrase-a,oom-old-release,greedy,42,patch-limits,True,OOMKilled,7.391
+qwen2.5:3b-instruct,paraphrase-a,oom-old-release,sampled,1,scale-deployment,False,OOMKilled,3.587
+qwen2.5:3b-instruct,paraphrase-a,oom-old-release,sampled,2,scale-deployment,False,OOMKilled,3.85
+qwen2.5:3b-instruct,paraphrase-a,oom-old-release,sampled,3,patch-limits,True,OOMKilled,3.537
+qwen2.5:3b-instruct,paraphrase-b,evicted,greedy,42,scale-deployment,False,Transient,11.466
+qwen2.5:3b-instruct,paraphrase-b,evicted,sampled,1,scale-deployment,False,Transient,3.059
+qwen2.5:3b-instruct,paraphrase-b,evicted,sampled,2,scale-deployment,False,resource_limit_exceeded,2.844
+qwen2.5:3b-instruct,paraphrase-b,evicted,sampled,3,rollback-deployment,False,Transient,3.058
+qwen2.5:3b-instruct,paraphrase-b,transient-old-release,greedy,42,restart-pod,True,Transient,7.096
+qwen2.5:3b-instruct,paraphrase-b,transient-old-release,sampled,1,restart-pod,True,TransientPodError,3.328
+qwen2.5:3b-instruct,paraphrase-b,transient-old-release,sampled,2,restart-pod,True,Transient,4.256
+qwen2.5:3b-instruct,paraphrase-b,transient-old-release,sampled,3,noop,True,Transient,2.831
+qwen2.5:3b-instruct,paraphrase-b,oom-old-release,greedy,42,patch-limits,True,Transient,7.093
+qwen2.5:3b-instruct,paraphrase-b,oom-old-release,sampled,1,patch-limits,True,OOMKilled,3.506
+qwen2.5:3b-instruct,paraphrase-b,oom-old-release,sampled,2,rollback-deployment,False,Transient Performance Issue,3.466
+qwen2.5:3b-instruct,paraphrase-b,oom-old-release,sampled,3,patch-limits,True,Transient,3.189

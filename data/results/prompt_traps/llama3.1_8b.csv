@@ -1,0 +1,37 @@
+model,prompt,fault,decoding,seed,action,correct,fault_class,latency_s
+llama3.1:8b,original,evicted,greedy,42,rollback-deployment,False,ResourceExhaustion,37.411
+llama3.1:8b,original,evicted,sampled,1,rollback-deployment,False,resource-pressure,6.821
+llama3.1:8b,original,evicted,sampled,2,patch-limits,False,resource-constraint,7.098
+llama3.1:8b,original,evicted,sampled,3,patch-limits,False,resource starvation,7.565
+llama3.1:8b,original,transient-old-release,greedy,42,rollback-deployment,False,deployment,15.912
+llama3.1:8b,original,transient-old-release,sampled,1,rollback-deployment,False,crashing-image,7.09
+llama3.1:8b,original,transient-old-release,sampled,2,rollback-deployment,False,deployment,8.115
+llama3.1:8b,original,transient-old-release,sampled,3,rollback-deployment,False,application,8.519
+llama3.1:8b,original,oom-old-release,greedy,42,patch-limits,True,OOMKilled,17.694
+llama3.1:8b,original,oom-old-release,sampled,1,patch-limits,True,container-crash,8.373
+llama3.1:8b,original,oom-old-release,sampled,2,patch-limits,True,ResourceExhaustion,8.099
+llama3.1:8b,original,oom-old-release,sampled,3,patch-limits,True,OOMKilled,9.734
+llama3.1:8b,paraphrase-a,evicted,greedy,42,patch-limits,False,ResourceExhaustion,31.843
+llama3.1:8b,paraphrase-a,evicted,sampled,1,rollback-deployment,False,cluster-unavailable,13.365
+llama3.1:8b,paraphrase-a,evicted,sampled,2,rollback-deployment,False,resource-starvation,8.099
+llama3.1:8b,paraphrase-a,evicted,sampled,3,rollback-deployment,False,ResourceExhaustion,10.701
+llama3.1:8b,paraphrase-a,transient-old-release,greedy,42,rollback-deployment,False,deployment,20.877
+llama3.1:8b,paraphrase-a,transient-old-release,sampled,1,rollback-deployment,False,Software Fault,10.573
+llama3.1:8b,paraphrase-a,transient-old-release,sampled,2,rollback-deployment,False,application,11.702
+llama3.1:8b,paraphrase-a,transient-old-release,sampled,3,rollback-deployment,False,deployment,9.942
+llama3.1:8b,paraphrase-a,oom-old-release,greedy,42,patch-limits,True,ResourceExhaustion,21.431
+llama3.1:8b,paraphrase-a,oom-old-release,sampled,1,patch-limits,True,unavailable,9.352
+llama3.1:8b,paraphrase-a,oom-old-release,sampled,2,patch-limits,True,resource,9.561
+llama3.1:8b,paraphrase-a,oom-old-release,sampled,3,patch-limits,True,ResourceExhaustion,9.007
+llama3.1:8b,paraphrase-b,evicted,greedy,42,patch-limits,False,OOMKilled,30.186
+llama3.1:8b,paraphrase-b,evicted,sampled,1,restart-pod,True,transient/stuck state,11.327
+llama3.1:8b,paraphrase-b,evicted,sampled,2,patch-limits,False,OOMKilled,6.58
+llama3.1:8b,paraphrase-b,evicted,sampled,3,patch-limits,False,OOMKilled,9.029
+llama3.1:8b,paraphrase-b,transient-old-release,greedy,42,rollback-deployment,False,bad release,16.869
+llama3.1:8b,paraphrase-b,transient-old-release,sampled,1,rollback-deployment,False,crashing-new-version,9.277
+llama3.1:8b,paraphrase-b,transient-old-release,sampled,2,rollback-deployment,False,bad release,7.197
+llama3.1:8b,paraphrase-b,transient-old-release,sampled,3,rollback-deployment,False,bad release,9.308
+llama3.1:8b,paraphrase-b,oom-old-release,greedy,42,patch-limits,True,OOMKilled,17.697
+llama3.1:8b,paraphrase-b,oom-old-release,sampled,1,patch-limits,True,resource_starvation,8.679
+llama3.1:8b,paraphrase-b,oom-old-release,sampled,2,patch-limits,True,OOMKilled,8.153
+llama3.1:8b,paraphrase-b,oom-old-release,sampled,3,patch-limits,True,OOMKilled,6.958

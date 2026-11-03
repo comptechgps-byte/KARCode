@@ -1,0 +1,49 @@
+model,prompt,fault,decoding,seed,action,correct,fault_class,latency_s
+llama3.1:8b,original,dependency-down,greedy,42,rollback-deployment,False,readiness-failing,36.282
+llama3.1:8b,original,dependency-down,sampled,1,rollback-deployment,False,Readiness probe failure,7.084
+llama3.1:8b,original,dependency-down,sampled,2,rollback-deployment,False,unhealthy,7.464
+llama3.1:8b,original,dependency-down,sampled,3,rollback-deployment,False,readiness-failing,6.836
+llama3.1:8b,original,external-config-change,greedy,42,rollback-deployment,False,deployment,16.454
+llama3.1:8b,original,external-config-change,sampled,1,rollback-deployment,False,Config,9.946
+llama3.1:8b,original,external-config-change,sampled,2,rollback-deployment,False,application,7.48
+llama3.1:8b,original,external-config-change,sampled,3,rollback-deployment,False,deployment,6.94
+llama3.1:8b,original,node-lost,greedy,42,rollback-deployment,False,deployment,14.626
+llama3.1:8b,original,node-lost,sampled,1,rollback-deployment,False,DeploymentRevisionIssue,8.49
+llama3.1:8b,original,node-lost,sampled,2,rollback-deployment,False,deployment,7.56
+llama3.1:8b,original,node-lost,sampled,3,rollback-deployment,False,deployment,7.699
+llama3.1:8b,original,cert-expired,greedy,42,rollback-deployment,False,deployment,15.937
+llama3.1:8b,original,cert-expired,sampled,1,rollback-deployment,False,Deploy Failure,7.614
+llama3.1:8b,original,cert-expired,sampled,2,rollback-deployment,False,Application,7.105
+llama3.1:8b,original,cert-expired,sampled,3,rollback-deployment,False,deployment,6.109
+llama3.1:8b,paraphrase-a,dependency-down,greedy,42,rollback-deployment,False,deployment,31.282
+llama3.1:8b,paraphrase-a,dependency-down,sampled,1,rollback-deployment,False,ResourceIssue,11.575
+llama3.1:8b,paraphrase-a,dependency-down,sampled,2,rollback-deployment,False,application,10.808
+llama3.1:8b,paraphrase-a,dependency-down,sampled,3,rollback-deployment,False,deployment,9.091
+llama3.1:8b,paraphrase-a,external-config-change,greedy,42,rollback-deployment,False,deployment,20.524
+llama3.1:8b,paraphrase-a,external-config-change,sampled,1,rollback-deployment,False,SoftwareError,9.873
+llama3.1:8b,paraphrase-a,external-config-change,sampled,2,rollback-deployment,False,Application,9.807
+llama3.1:8b,paraphrase-a,external-config-change,sampled,3,rollback-deployment,False,deployment,10.339
+llama3.1:8b,paraphrase-a,node-lost,greedy,42,rollback-deployment,False,deployment,18.515
+llama3.1:8b,paraphrase-a,node-lost,sampled,1,restart-pod,True,unknown,10.711
+llama3.1:8b,paraphrase-a,node-lost,sampled,2,restart-pod,True,Transient,9.472
+llama3.1:8b,paraphrase-a,node-lost,sampled,3,rollback-deployment,False,deployment,9.642
+llama3.1:8b,paraphrase-a,cert-expired,greedy,42,rollback-deployment,False,deployment,20.645
+llama3.1:8b,paraphrase-a,cert-expired,sampled,1,rollback-deployment,False,CrashLoopBackOff,9.61
+llama3.1:8b,paraphrase-a,cert-expired,sampled,2,rollback-deployment,False,application,9.827
+llama3.1:8b,paraphrase-a,cert-expired,sampled,3,rollback-deployment,False,deployment,9.529
+llama3.1:8b,paraphrase-b,dependency-down,greedy,42,rollback-deployment,False,bad release,28.68
+llama3.1:8b,paraphrase-b,dependency-down,sampled,1,rollback-deployment,False,application fault,6.845
+llama3.1:8b,paraphrase-b,dependency-down,sampled,2,rollback-deployment,False,readiness-failing,6.702
+llama3.1:8b,paraphrase-b,dependency-down,sampled,3,rollback-deployment,False,bad release,8.069
+llama3.1:8b,paraphrase-b,external-config-change,greedy,42,rollback-deployment,False,bad release,16.753
+llama3.1:8b,paraphrase-b,external-config-change,sampled,1,rollback-deployment,False,deployment-revision,6.988
+llama3.1:8b,paraphrase-b,external-config-change,sampled,2,rollback-deployment,False,bad release,7.23
+llama3.1:8b,paraphrase-b,external-config-change,sampled,3,rollback-deployment,False,bad release,7.097
+llama3.1:8b,paraphrase-b,node-lost,greedy,42,rollback-deployment,False,bad release,16.854
+llama3.1:8b,paraphrase-b,node-lost,sampled,1,rollback-deployment,False,unknown-phase,8.016
+llama3.1:8b,paraphrase-b,node-lost,sampled,2,restart-pod,True,transient/stuck,9.936
+llama3.1:8b,paraphrase-b,node-lost,sampled,3,rollback-deployment,False,bad release,6.727
+llama3.1:8b,paraphrase-b,cert-expired,greedy,42,rollback-deployment,False,bad release,17.311
+llama3.1:8b,paraphrase-b,cert-expired,sampled,1,rollback-deployment,False,crashing-new-version,7.474
+llama3.1:8b,paraphrase-b,cert-expired,sampled,2,rollback-deployment,False,bad release,7.441
+llama3.1:8b,paraphrase-b,cert-expired,sampled,3,rollback-deployment,False,bad release,6.364
