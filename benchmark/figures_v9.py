@@ -42,7 +42,8 @@ SEQ = ["#f0efec", "#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f9
 CMAP = LinearSegmentedColormap.from_list("seq", SEQ)
 plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8, "axes.edgecolor": GRID,
                      "axes.labelcolor": INK2, "xtick.color": INK2, "ytick.color": INK2,
-                     "text.color": INK, "figure.facecolor": "white", "axes.facecolor": "white"})
+                     "text.color": INK, "figure.facecolor": "white", "axes.facecolor": "white",
+                     "pdf.fonttype": 42, "ps.fonttype": 42})
 
 
 def save(fig, name: str) -> None:

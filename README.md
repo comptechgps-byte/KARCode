@@ -76,7 +76,7 @@ docker exec runner bash benchmark/run_v2_experiments.sh                         
 docker exec runner bash benchmark/run_v3_experiments.sh                                     # Exp 4-5
 docker exec runner bash benchmark/run_v4_experiments.sh                                     # Exp 6, 2R
 docker exec runner bash benchmark/run_v5_experiments.sh                                     # Exp 7-9 (+ traps)
-#    Exp 10 needs agent v3.1: rebuild the image (setup script, step 2), then
+#    Exp 10 uses agent v3.1, the version in agent/ (see "Agent versions" below)
 docker exec runner bash benchmark/run_v6_experiments.sh                                     # Exp 10 (+ traps2)
 
 # 6. offline studies (Ollama IP: docker inspect ollama); models: qwen2.5:{3b,7b,14b}-instruct,
@@ -114,6 +114,25 @@ at least 24 GB (`memory=24GB` in `%UserProfile%\.wslconfig` on Windows).
 On SMT hosts set `LLM_NUM_THREAD` (agent manifest) to the number of physical
 cores: Ollama's default of one thread per logical CPU was ~18× slower here.
 
+## Agent versions
+
+| Experiments | Agent | Source |
+|---|---|---|
+| 1 | v2.0 | `agent-versions/v2.0/` |
+| 2, 3 | v2.1.1 | `agent-versions/v2.1.1/` |
+| 2R, 4-9 | v3.0 | `agent-versions/v3.0/` |
+| 10 | v3.1 | `agent/` |
+
+`data/freeze/` records the hashes and what changed between versions. Every pre-existing
+condition sets `FAILURE_ESCALATION=0`, so running it on v3.1 reproduces v3.0. To build an
+earlier version instead:
+
+```bash
+mkdir /tmp/kar && cp requirements.txt /tmp/kar/ && cp -r agent-versions/v2.0 /tmp/kar/agent
+docker build -t k8s-agentic-remediator:local -f docker/Dockerfile /tmp/kar
+kind load docker-image k8s-agentic-remediator:local --name agentic-remediator
+```
+
 ## Safety notes
 
 - The agent holds **no ClusterRole**; its namespaced Role grants only the verbs its actions need.
@@ -133,8 +152,9 @@ manifests/    namespace, RBAC, demo app (+ services), agent, LLM endpoint templa
 docker/       agent image
 setup/        Kind cluster, Ollama and agent setup script
 tools/runner/ reproducible runner image (pinned versions)
+agent-versions/ source of the earlier agent versions used in the experiments
 tests/        unit tests for rules, escalation, gate and tools
-data/         experimental data (results/) and the audit of the v1 prototype
+data/         experimental data (results/), run logs, freeze records, audit of the v1 prototype
 ```
 
 ## Authors

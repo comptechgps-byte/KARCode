@@ -49,6 +49,26 @@ manifest file, so any deviation from the frozen version is detectable.
 | v3.0 | `sha256:b37d58d1e98beddd774b613f46ccaeaba92bb95877d27273e5fc2679c151efac` | Experiments 2R and 4-9 |
 | v3.1 | `sha256:f8448998a72ef1636b3fc1599b779fe93dbf5e12600b9b30ea94b382c371630c` | Experiment 10 |
 
+The source of every version is in this repository: `agent/` is v3.1, and
+`agent-versions/v2.0`, `v2.1.1` and `v3.0` hold the earlier ones. They were extracted from
+the images above, and all 278 hashes recorded for agent files in the reported runs match
+them. v2.1.1 is the build the article calls version 2.1: v2.1 with a single LLM context
+size. `freeze/` holds the freeze records: file hashes and what changed between versions.
+
+Three non-agent files were extended during the study, and their older copies are not in
+this repository, so the hashes recorded before those changes differ from the current
+files: `manifests/01-rbac.yaml` (read-only rights for the generic tools, agent v3.0) and
+`testbeds/boutique/faults.yaml` and `inject.sh` (the catalog amendment for Experiment 9).
+The current files are those of Experiment 10.
+
+A comment in `manifests/02-demo-app.yaml` points to `docs/audit-v1.md`; the audit is at
+`data/audit-v1.md`. The comment stays because that file's hash is recorded.
+
+## Run logs
+
+`logs/` records every incident during the experiments and how it was handled. Paths such
+as `results/main` in the logs and freeze records refer to `data/results/main` here.
+
 ## Files in each run folder
 
 - `trials.csv`: one row per trial. Key columns: `trial_id` (block-scenario-condition),
