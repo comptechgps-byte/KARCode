@@ -114,6 +114,10 @@ at least 24 GB (`memory=24GB` in `%UserProfile%\.wslconfig` on Windows).
 On SMT hosts set `LLM_NUM_THREAD` (agent manifest) to the number of physical
 cores: Ollama's default of one thread per logical CPU was ~18× slower here.
 
+`setup/setup_kind_cluster.sh` starts `ollama/ollama:latest`, so a new run may get a newer
+Ollama than the v0.34.4 reported in the article. To match it, change that image to
+`ollama/ollama:0.34.4` before running step 2.
+
 ## Agent versions
 
 | Experiments | Agent | Source |
